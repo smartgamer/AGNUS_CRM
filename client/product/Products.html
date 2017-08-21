@@ -1,0 +1,22 @@
+<template name="Products">
+    
+    <section class="button-Menu">
+        <button href="/products/newProduct" class="btn btn-primary newProduct"> New Product </button>
+      
+    </section>
+    
+    <section class="ListProducts">
+        {{> reactiveTable collection=myCollection}}
+    </section>
+
+    <section class="products">
+        {{#if Template.subscriptionsReady}}
+            {{#each products}}
+                {{> Product}}
+            {{/each}}
+        {{else}}
+            <p>Loading</p>
+        {{/if}}
+    </section>
+    
+</template>
