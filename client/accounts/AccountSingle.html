@@ -1,0 +1,33 @@
+<template name="AccountSingle">
+    
+    <a href="/Account_Records/{{account._id}}">Records</a>
+
+     <section class="recipes">
+         
+         <h2>{{account.name}}</h2>
+         <p>{{account.desc}}</p>
+         <div class="panel-group">
+           <div class="panel panel-default">
+             <div class="panel-heading">
+               <h4 class="panel-title">
+                 <a data-toggle="collapse" href="#collapse1">Account Information</a>
+               </h4>
+             </div>
+             <div id="collapse1" class="panel-collapse collapse">
+               <div class="panel-body">
+                   <p>Telphone: {{account.telphone}}</p>
+                   <p>Fax: {{account.fax}}</p>
+
+               </div>
+               <div class="panel-footer">Panel Footer</div>
+             </div>
+           </div>
+         </div>
+     
+     
+     
+    </section>
+    
+     
+    
+ </template>

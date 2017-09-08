@@ -1,22 +1,12 @@
 <template name="Products">
     
-    <section class="button-Menu">
-        <button href="/products/newProduct" class="btn btn-primary newProduct"> New Product </button>
+    <section class="button-Menu recipe">
+        <button href="/products/newProduct/" class="btn btn-primary newProduct"> New Product </button>
       
     </section>
     
-    <section class="ListProducts">
-        {{> reactiveTable collection=myCollection}}
+    <section class="ListProducts recipe">
+        {{> reactiveTable class="table table-striped table-hover ListProducts" settings=settings }}
     </section>
 
-    <section class="products">
-        {{#if Template.subscriptionsReady}}
-            {{#each products}}
-                {{> Product}}
-            {{/each}}
-        {{else}}
-            <p>Loading</p>
-        {{/if}}
-    </section>
-    
 </template>
