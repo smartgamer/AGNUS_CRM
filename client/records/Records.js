@@ -26,8 +26,22 @@ Template.Records.helpers({
             showNavigation: 'auto',
             fields: [
                 { key: '_id', label: 'Id',hidden: true },
-                { key: 'desc', label: 'desc' },
-                { key: 'account', label:'Account'}  
+                { key:'createdAt',label:'Created At', 
+                    fn: function (value, object, key) { return moment(value).format('DD-MM-YYYY HH:mm'); }
+                },
+                { key:'openAt',label:'Open At', 
+                    fn: function (value, object, key) { 
+                        
+                        if (moment(value).isValid()) {
+                            return moment(value).format('DD-MM-YYYY HH:mm');
+                        } else{
+                            return;
+                        }
+                    }
+                },
+                { key:'summary', label:'Summary'},
+                { key: 'desc', label: 'Description' },
+                { key: 'account', label:'Account', hidden:true}
             ],
             filters: ['myFilter'],
             useFontAwesome: true,

@@ -58,6 +58,16 @@ RecordSchema = new SimpleSchema({
         autoform: {
             type: "hidden"
         }
+    },
+    openAt:{
+        type: Date,
+        label: "Open Date",
+        autoform: {
+          type: "bootstrap-datepicker",
+          datePickerOptions: {
+            autoclose: true
+          }
+        }
     }
   
 });
