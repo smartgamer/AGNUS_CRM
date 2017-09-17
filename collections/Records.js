@@ -31,7 +31,7 @@ RecordSchema = new SimpleSchema({
 
             if (Meteor.isClient) {
                 currentAuthor = Session.get('currentAccount')
-                console.log(currentAuthor);  //return the correct value
+                //console.log(currentAuthor);  //return the correct value
                 return currentAuthor;    
             };
         },

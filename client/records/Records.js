@@ -4,15 +4,21 @@ Template.Records.onCreated(function(){
     self.autorun(function(){
         self.subscribe('records');
     });
+    
+    currentAuthor = Session.get('currentAccount');
+
+    this.filter = new ReactiveTable.Filter("myFilter");
+    this.filter.set(currentAuthor);
 });
 
 Template.Records.helpers({
+
     accountsRecords: () => {
         return Records.find({});
     },
 
     settings: function () {
-        
+        currentAuthor = Session.get('currentAccount')  ; 
         return {
             collection: 'accountsRecordsList',
             rowsPerPage: 5,
@@ -23,11 +29,14 @@ Template.Records.helpers({
                 { key: 'desc', label: 'desc' },
                 { key: 'account', label:'Account'}  
             ],
+            filters: ['myFilter'],
             useFontAwesome: true,
             rowClass:'',
             group: 'records'
         };
     }
+
+    
 });
 
 Template.Records.events({

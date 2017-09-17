@@ -31,9 +31,7 @@ ReactiveTable.publish("accountsList",
 
 ReactiveTable.publish("accountsRecordsList",
     function () {
-        
-        return Records ;    
-        
+        return Records;    
     }
 );
 
