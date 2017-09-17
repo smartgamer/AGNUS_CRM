@@ -4,7 +4,7 @@ Meteor.startup(() => {
   // code to run on server at startup
   smtp = {
     username: 'guimaraesmahota@gmail.com',   // eg: server@gentlenode.com
-    password: 'Agnes27012015!',   // eg: 3eeP1gtizk5eziohfervU
+    password: '*****',   // eg: 3eeP1gtizk5eziohfervU
     server:   'smtp.gmail.com',  // eg: mail.gandi.net
     port: 25
   }
