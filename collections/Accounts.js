@@ -1,5 +1,7 @@
 
 import SimpleSchema from 'simpl-schema';
+
+
 SimpleSchema.extendOptions(['autoform']);
 
 Accounts = new Mongo.Collection('accounts');
@@ -74,6 +76,5 @@ otherContact:{
  }
   
 });
-
 
 Accounts.attachSchema(AccountSchema);

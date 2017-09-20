@@ -18,11 +18,27 @@ RecordSchema = new SimpleSchema({
  
     desc: {
         type: String,
-        label: "Description"
+        label: "Description",
+        max: 2000,
+        autoform: {
+          afFieldInput: {
+            type: "textarea",
+            rows: 6,
+            class: "foo"
+          }
+        }
     },
     summary:{
         type: String,
-        label:"Summary"
+        label:"Summary",
+        max: 900,
+        autoform: {
+          afFieldInput: {
+            type: "textarea",
+            rows: 2,
+            class: "foo"
+          }
+        }
     },
     account:{
         type: String,
@@ -31,7 +47,6 @@ RecordSchema = new SimpleSchema({
 
             if (Meteor.isClient) {
                 currentAuthor = Session.get('currentAccount')
-                //console.log(currentAuthor);  //return the correct value
                 return currentAuthor;    
             };
         },
@@ -63,13 +78,26 @@ RecordSchema = new SimpleSchema({
         type: Date,
         label: "Open Date",
         autoform: {
-          type: "bootstrap-datepicker",
-          datePickerOptions: {
-            autoclose: true
-          }
+            type:"hidden"
+            //  type: "bootstrap-datepicker",
+        //  datePickerOptions: {
+        //    autoclose: true
+        //  }
+        },
+        autoValue: function(){
+            return new Date()
         }
     }
   
+});
+
+Meteor.methods({
+    deleteRecord: function(id){
+        Records.remove(id);
+    },
+    sendEmailRecord: function(id){
+
+    }
 });
 
 

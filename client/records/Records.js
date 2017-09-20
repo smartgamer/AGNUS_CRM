@@ -60,6 +60,12 @@ Template.Records.events({
 });
 
 Template.Records.events({
+    'click .new-Record': function(){
+        Session.set('newRecord',true);
+    }
+})
+
+Template.Records.events({
   'click .ListAccountsRecords tbody tr': function (event) {
     // set the blog post we'll display details and news for
     var post = this;

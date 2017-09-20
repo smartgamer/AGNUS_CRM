@@ -13,7 +13,19 @@ Template.RecordSingle.onCreated(function(){
 Template.RecordSingle.helpers({
     record: () => {
         var id = FlowRouter.getParam('id');
-        Session.set("currentAccount", id);
-        return Accounts.findOne({_id: id});
+        return Records.findOne({_id: id});
     }
 });
+
+Template.RecordSingle.events({
+    'click .fa-trash':function(){
+        var id = FlowRouter.getParam('id');
+        Meteor.call('deleteRecord',id);
+
+        currentAuthor = Session.get('currentAccount')
+        FlowRouter.go('/Account_Records/' + currentAuthor);
+    },
+    'click .list-Appoiments':function(){
+        FlowRouter.go('/Appoiments/' + this._id);
+    }
+})

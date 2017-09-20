@@ -1,15 +1,15 @@
 <template name="Records">
-        
-        <section class="button-Menu recipe">
-            <button href="/records/newRecords/" class="btn btn-primary newAccount"> New Records </button>
-          
-        </section>
-
-        
-        
-        <section class="ListAccounts recipe">
-            
+    {{#if $.Session.get 'newRecord'}} 
+        {{> NewRecord}}
+    {{else}}
+        <button class="new-Record"> New Record </button>
+    {{/if}}
+    <section class="ListAccounts recipe">
+        {{#if Template.subscriptionsReady}}
             {{> reactiveTable class="table table-striped table-hover ListAccountsRecords" settings=settings }}
-        </section>
+        {{else}}
+            <p>Loading</p>
+        {{/if}}
+    </section>
         {{> reactiveTableFilter id="myFilter" label="Filter" class="myFilter" }}
 </template>
