@@ -28,8 +28,8 @@ Meteor.methods({
           'text':text,
          'html': emailData,
             attachments: [{
-            filename: 'flapjacks.pdf',
-            filepath: 'https://s3.amazonaws.com/tmc-post-content/flapjacks.pdf',
+            //filename: 'flapjacks.pdf',
+            //filepath: 'https://s3.amazonaws.com/tmc-post-content/flapjacks.pdf',
             contentType: 'pdf',
             }],
         });

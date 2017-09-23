@@ -80,13 +80,14 @@ RecordSchema = new SimpleSchema({
         autoform: {
             type:"hidden"
             //  type: "bootstrap-datepicker",
-        //  datePickerOptions: {
-        //    autoclose: true
-        //  }
-        },
-        autoValue: function(){
-            return new Date()
+            //  datePickerOptions: {
+            //    autoclose: true
+            //  }
         }
+        //,
+        //autoValue: function(){
+        //    return new Date()
+        //}
     }
   
 });
@@ -94,9 +95,6 @@ RecordSchema = new SimpleSchema({
 Meteor.methods({
     deleteRecord: function(id){
         Records.remove(id);
-    },
-    sendEmailRecord: function(id){
-
     }
 });
 

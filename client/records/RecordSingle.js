@@ -22,10 +22,10 @@ Template.RecordSingle.events({
         var id = FlowRouter.getParam('id');
         Meteor.call('deleteRecord',id);
 
-        currentAuthor = Session.get('currentAccount')
-        FlowRouter.go('/Account_Records/' + currentAuthor);
+        id = Session.get('currentAccount')
+        FlowRouter.go('/Account_Records/' + id);
     },
     'click .list-Appoiments':function(){
-        FlowRouter.go('/Appoiments/' + this._id);
+        FlowRouter.go('/Appoiments/');
     }
 })

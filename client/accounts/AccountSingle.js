@@ -17,3 +17,10 @@ Template.AccountSingle.helpers({
         return Accounts.findOne({_id: id});
     }
 });
+
+Template.AccountSingle.events({
+    'click .list-Records':function(){
+        var id = FlowRouter.getParam('id');
+        FlowRouter.go('/Account_Records/' + id);
+    }
+})

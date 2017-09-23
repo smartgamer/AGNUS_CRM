@@ -16,6 +16,9 @@ Meteor.publish('records',function(){
     return Records.find({});
 });
 
+Meteor.publish('appoiments',function(){
+    return Appoiments.find({});
+});
 
 ReactiveTable.publish("productsList",
     function () {
@@ -35,3 +38,8 @@ ReactiveTable.publish("accountsRecordsList",
     }
 );
 
+ReactiveTable.publish("appoimentsList",
+    function () {
+        return Appoiments;    
+    }
+);

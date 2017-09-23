@@ -1,22 +1,26 @@
 <template name="Account">
     <article class="recipe">
-        
-        <div class="panel-group">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
-                </h4>
-              </div>
-              <div id="collapse1" class="panel-collapse collapse">
-                <div class="panel-body">Panel Body</div>
-                <div class="panel-footer">Panel Footer</div>
-              </div>
+        <section class="recipes">
+            
+            <i class="fa fa-trash"></i>   
+            
+            <div class="panel-group">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+                    </h4>
+                  </div>
+                  <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body">Panel Body</div>
+                    <div class="panel-footer">Panel Footer</div>
+                  </div>
+                </div>
             </div>
-        </div>
-        
-        <a href="/account/{{_id}}">View Details</a>
-        <button class="btn-primary toggle-menu"> Add To Menu</button>
-        <button class="btn-deny toggle-menu"> Remove from Menu</button>
+            
+            <a href="/account/{{_id}}">View Details</a>
+            <button class="btn-primary toggle-menu"> Add To Menu</button>
+            <button class="btn-deny toggle-menu"> Remove from Menu</button>
+        </section>
     </article>
 </template>

@@ -1,0 +1,15 @@
+<template name="NewAppoiment">
+    <div class="new-recipe-container">
+        <i class="fa fa-close"></i>
+        {{> quickForm collection="Appoiments" id="insertRecordForm" type="insert" class= "new-recipe-form" fields="desc,summary,type,date,email"}}
+        
+        {{> NewEmail}}
+    </div>
+        
+</template>
+
+<template name="NewEmail">
+    <div class="new-Email">
+        Ola mundo
+    </div>
+</template>

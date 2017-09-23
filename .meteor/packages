@@ -24,15 +24,23 @@ fortawesome:fontawesome
 spiderable
 fastclick@1.0.13
 raix:handlebar-helpers
-aldeed:autoform@=5.8.1
 accounts-ui@1.1.9
 accounts-password@1.4.0
 matb33:bootstrap-glyphicons
 zimme:active-route
 gwendall:auth-client-callbacks
-aldeed:collection2-core@2.0.0
-aldeed:simple-schema
-#meteortoys:allthings
+
+#aldeed:collection2-core@2.0.0
+#aldeed:simple-schema
+#aldeed:autoform
+#aldeed:autoform@=5.8.1
+
+aldeed:collection2-core
+aldeed:autoform
+aldeed:scheduled-tasks
+#aldeed:autoform-bs-datepicker
+
+meteortoys:allthings
 email@1.2.3
 meteorhacks:ssr@2.2.0   #Template dos emails
 aslagle:reactive-table
@@ -40,6 +48,6 @@ coursierprive:tether
 twbs:bootstrap@=4.0.0-alpha2
 mrt:flash-messages
 momentjs:moment
-aldeed:autoform-bs-datepicker
+
 orgztion:meteor-global-tether
 mdg:validated-method

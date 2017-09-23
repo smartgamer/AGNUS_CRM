@@ -1,0 +1,177 @@
+import { Session } from 'meteor/session';
+import SimpleSchema from 'simpl-schema';
+
+SimpleSchema.extendOptions(['autoform']);
+
+Appoiments = new Mongo.Collection('appoiments');
+
+Schema = {};
+
+Schema.Email = new SimpleSchema({
+    
+    from:{
+        type: String,
+        label: "From"
+    },
+    to:{
+        type: String,
+        label: "To"
+    },
+    cc:{
+        type: String,
+        label: "CC",
+        optional:true
+    },
+    bcc:{
+        type: String,
+        label: "BCC",
+        optional:true
+    },
+    message:{
+        type: String,
+        label: "Message"
+    },
+    template:{
+        type: String,
+        label: "Template",
+        optional:true
+    }
+
+});
+
+Appoiments.allow({
+ insert: function(userId, doc){
+  return !!userId;
+ },
+ update: function(userId, doc){
+  return !!userId;
+ }
+});
+
+AppoimentSchema = new SimpleSchema({
+ 
+    desc: {
+        type: String,
+        label: "Description",
+        max: 1000,
+        autoform: {
+          afFieldInput: {
+            type: "textarea",
+            rows: 4,
+            class: "foo"
+          }
+        }
+    },
+    summary:{
+        type: String,
+        label:"Summary",
+        max: 900,
+        autoform: {
+          afFieldInput: {
+            type: "textarea",
+            rows: 2,
+            class: "foo"
+          }
+        }
+    },
+    type:{
+        type: String,
+        label:"Type",
+        allowedValues: ['Email','Task','Meeting','Call'],
+        optional: false,
+        autoform: {
+            options: [
+              {label: "Send Email", value: 'Email'},
+              {label: "Create Task", value: 'Task'},
+              {label: "Create Meeting", value: 'Meeting'},
+              {label: "Make Call", value: 'Call'} 
+            ]
+          }
+    },
+    account_id:{
+        type: String,
+        label: "Account",
+        optional:true,
+        autoValue: function(){
+
+            if (Meteor.isClient) {
+                currentAuthor = Session.get('currentAccount')
+                return currentAuthor;    
+            };
+        },
+        autoform: {
+            type: "hidden"
+        }
+    },
+    record_id:{
+        type: String,
+        label: "Record Id",
+        optional:true,
+        autoValue: function(){
+
+            if (Meteor.isClient) {
+                currentAuthor = Session.get('currentAccount')
+                return currentAuthor;    
+            };
+        },
+        autoform: {
+            type: "hidden"
+        }
+    },
+    author: {
+        type: String,
+        label: "Author",
+        autoValue: function(){
+            return this.userId
+        },
+        autoform: {
+            type: "hidden"
+        }
+    },
+    createdAt: {
+        type: Date,
+        label: "Created At",
+        autoValue: function(){
+            return new Date()
+        },
+        autoform: {
+            type: "hidden"
+        }
+    },
+    date:{
+        type: Date,
+        label: "Date",
+        autoform: {
+            //type:"hidden"
+            //  type: "bootstrap-datepicker",
+        //  datePickerOptions: {
+        //    autoclose: true
+        //  }
+        }
+    },
+    status: {
+        type:String,
+        allowedValues: ['Open','Close'],
+        autoform: {
+            options: [
+              {label: "Open", value: 'Open'},
+              {label: "Close", value: 'Close'} 
+            ]
+          }
+    },
+    email: {
+        type: Schema.Email,
+        optional:true,
+    }
+    
+  
+});
+
+Meteor.methods({
+    deleteAppoiment: function(id){
+        Appoiments.remove(id);
+    }
+});
+
+
+Appoiments.attachSchema(AppoimentSchema);
