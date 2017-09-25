@@ -39,6 +39,29 @@ Schema.Email = new SimpleSchema({
 
 });
 
+Schema.Task = new SimpleSchema({
+    
+    begin:{
+        type: Date,
+        label: "Begin"
+    },
+    end:{
+        type: Date,
+        label: "End"
+    },
+    time:{
+        type: Number,
+        label: "Total Time",
+        optional:true
+    },
+    Discount:{
+        type: Number,
+        label: "Discount Time",
+        optional:true
+    }
+
+});
+
 Appoiments.allow({
  insert: function(userId, doc){
   return !!userId;
@@ -80,6 +103,9 @@ AppoimentSchema = new SimpleSchema({
         allowedValues: ['Email','Task','Meeting','Call'],
         optional: false,
         autoform: {
+            afFieldInput: {
+                class: 'type'
+            },
             options: [
               {label: "Send Email", value: 'Email'},
               {label: "Create Task", value: 'Task'},
@@ -151,17 +177,23 @@ AppoimentSchema = new SimpleSchema({
     },
     status: {
         type:String,
-        allowedValues: ['Open','Close'],
+        allowedValues: ['Open','Close','Done'],
         autoform: {
+            
             options: [
               {label: "Open", value: 'Open'},
-              {label: "Close", value: 'Close'} 
+              {label: "Close", value: 'Close'}, 
+              {label: "Done", value: 'Done'}
             ]
           }
     },
     email: {
         type: Schema.Email,
         optional:true,
+    },
+    task:{
+        type: Schema.Task,
+        optional:true
     }
     
   

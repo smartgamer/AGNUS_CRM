@@ -5,6 +5,7 @@ Template.NewRecord.onCreated(function(){
     
     self.autorun(function(){
         self.subscribe('records');
+        self.subscribe('userList');
     });
 });
 
@@ -12,7 +13,19 @@ Template.NewRecord.events({
     'click .fa-close': function(){
         Session.set('newRecord',false);
     }
-})
+});
+
+Template.NewRecord.helpers({
+    usersOptions: function () {
+        return Meteor.users.find({}, {
+            sort: {
+                username: 1
+            }
+          }).map(function (c)  {
+            return {label: c.username , value: c._id};
+        });
+    }
+  });
 
 AutoForm.addHooks(['insertRecordForm'], {
     after:{

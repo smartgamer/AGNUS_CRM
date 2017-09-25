@@ -11,5 +11,45 @@ Meteor.startup(() => {
 
   process.env.MAIL_URL = 'smtp://' + encodeURIComponent(smtp.username) + ':' + encodeURIComponent(smtp.password) + '@' + encodeURIComponent(smtp.server) + ':' + smtp.port;
 
+  // Add Facebook configuration entry
+  ServiceConfiguration.configurations.update(
+    { "service": "facebook" },
+    {
+      $set: {
+        "appId": "XXXXXXXXXXXXXXX",
+        "secret": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      }
+    },
+    { upsert: true }
+  );
+
+  // Add Facebook configuration entry
+  ServiceConfiguration.configurations.update(
+    { "service": "facebook" },
+    {
+      $set: {
+        "appId": "XXXXXXXXXXXXXXX",
+        "secret": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      }
+    },
+    { upsert: true }
+  );
+
+  // Add GitHub configuration entry
+  ServiceConfiguration.configurations.update(
+    { "service": "github" },
+    {
+      $set: {
+        "clientId": "XXXXXXXXXXXXXXXXXXXX",
+        "secret": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+      }
+    },
+    { upsert: true }
+  );
+
 });
 
+// Deny all client-side updates to user documents
+Meteor.users.deny({
+  update() { return true; }
+});

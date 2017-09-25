@@ -57,11 +57,20 @@ RecordSchema = new SimpleSchema({
     author: {
         type: String,
         label: "Author",
-        autoValue: function(){
-            return this.userId
-        },
+        //autoValue: function(){
+        //    return this.userId
+        //},
         autoform: {
-            type: "hidden"
+            type: "select",
+            options: function () {
+                return Meteor.users.find({}, {
+                    sort: {
+                        username: 1
+                    }
+                  }).map(function (c)  {
+                    return {label: c.username , value: c._id};
+                });
+            }
         }
     },
     createdAt: {
@@ -83,11 +92,28 @@ RecordSchema = new SimpleSchema({
             //  datePickerOptions: {
             //    autoclose: true
             //  }
+        },
+        autoValue: function() {
+            var openAt = this.field('openAt');
+            if (!openAt.isSet) {
+                return new Date() ;
+            }
         }
         //,
         //autoValue: function(){
         //    return new Date()
         //}
+    },
+    status: {
+        type:String,
+        allowedValues: ['Open','In Progress','Canceled','Close','Done'],
+        autoform: {
+            options: [
+              {label: "Open", value: 'Open'},
+              {label: "Close", value: 'Close'}, 
+              {label: "Done", value: 'Done'}
+            ]
+        }
     }
   
 });

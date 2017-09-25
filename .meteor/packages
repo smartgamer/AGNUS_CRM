@@ -24,8 +24,18 @@ fortawesome:fontawesome
 spiderable
 fastclick@1.0.13
 raix:handlebar-helpers
+
+#User And Accounts
+useraccounts:bootstrap
+useraccounts:flow-routing
+#useraccounts:famous-wrapper
+
+service-configuration
 accounts-ui@1.1.9
 accounts-password@1.4.0
+accounts-facebook
+accounts-google
+
 matb33:bootstrap-glyphicons
 zimme:active-route
 gwendall:auth-client-callbacks
@@ -40,7 +50,9 @@ aldeed:autoform
 aldeed:scheduled-tasks
 #aldeed:autoform-bs-datepicker
 
-meteortoys:allthings
+#aldeed:template-extension  #Ainda temos de analisar esta extensao muito interessante
+
+#meteortoys:allthings #Debug
 email@1.2.3
 meteorhacks:ssr@2.2.0   #Template dos emails
 aslagle:reactive-table

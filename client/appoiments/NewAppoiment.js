@@ -11,6 +11,22 @@ Template.NewAppoiment.onCreated(function(){
 Template.NewAppoiment.events({
     'click .fa-close': function(){
         Session.set('NewAppoiment',false);
+    },
+    'change .type':function(e,t){
+
+        var type= t.find('.type').value;
+
+        switch(type){
+            case 'Email': 
+                t.find('#insertRecordForm').fields="desc,summary,type,date,status,task"
+                console.log("Necessario limpar os dados dos Tasks")
+                break; 
+            case 'Task':
+                t.find('#insertRecordForm').fields="desc,summary,type,date,status,email"
+                console.log("Necessario limpar os dados dos Emails")
+                break;   
+        }
+
     }
 })
 
