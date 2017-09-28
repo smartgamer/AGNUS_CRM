@@ -18,19 +18,17 @@ Meteor.methods({
       // Let other method calls from the same client start running, without
       // waiting for the email sending to complete.
       this.unblock();
-      
-      console.log(SSR);
 
       Email.send({ 
           'to':to, 
           'from':from, 
           'subject':subject, 
           'text':text,
-         'html': emailData,
+          'html': emailData,
             attachments: [{
             //filename: 'flapjacks.pdf',
             //filepath: 'https://s3.amazonaws.com/tmc-post-content/flapjacks.pdf',
-            contentType: 'pdf',
+            //contentType: 'pdf',
             }],
         });
       

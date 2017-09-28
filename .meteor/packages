@@ -35,6 +35,7 @@ accounts-ui@1.1.9
 accounts-password@1.4.0
 accounts-facebook
 accounts-google
+alanning:roles
 
 matb33:bootstrap-glyphicons
 zimme:active-route
@@ -48,8 +49,9 @@ gwendall:auth-client-callbacks
 aldeed:collection2-core
 aldeed:autoform
 aldeed:scheduled-tasks
-#aldeed:autoform-bs-datepicker
+aldeed:schema-index
 
+#aldeed:autoform-bs-datepicker
 #aldeed:template-extension  #Ainda temos de analisar esta extensao muito interessante
 
 #meteortoys:allthings #Debug
@@ -63,3 +65,12 @@ momentjs:moment
 
 orgztion:meteor-global-tether
 mdg:validated-method
+
+#storage adapter packages
+cfs:standard-packages 
+cfs:filesystem
+cfs:s3
+cfs:dropbox
+
+vsivsi:job-collection
+cfs:gridfs
