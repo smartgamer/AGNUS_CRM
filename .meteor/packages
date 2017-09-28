@@ -5,8 +5,8 @@
 # but you can also edit it by hand.
 
 meteor-base@1.1.0            # Packages every Meteor app needs to have
-mobile-experience@1.0.4       # Packages for a great mobile UX
-mongo@1.2.0                   # The database Meteor supports right now
+mobile-experience@1.0.5       # Packages for a great mobile UX
+mongo@1.2.2                   # The database Meteor supports right now
 blaze-html-templates # Compile .html files into Meteor Blaze views
 session@1.1.7
 #jquery@1.11.10
@@ -30,11 +30,11 @@ useraccounts:bootstrap
 useraccounts:flow-routing
 #useraccounts:famous-wrapper
 
-service-configuration
+service-configuration@1.0.11
 accounts-ui@1.1.9
 accounts-password@1.4.0
-accounts-facebook
-accounts-google
+accounts-facebook@1.2.1
+accounts-google@1.2.0
 alanning:roles
 
 matb33:bootstrap-glyphicons
