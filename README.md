@@ -29,20 +29,20 @@ Appoiment
 - Status [Open, Close]
 
 Email 
-	- from,
-	- To : String List
-	- CC : String List
-	- BCC : String List
-	- Message : Text
-	- Template :  HTML
+- from,
+- To : String List
+- CC : String List
+- BCC : String List
+- Message : Text
+- Template :  HTML
 	
 	
 Task
-	- Date
-	- Begin
-	- End
-	- Time
-	- Discount
+- Date
+- Begin
+- End
+- Time
+- Discount
 	
 
 ### License
