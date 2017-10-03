@@ -43,7 +43,21 @@ Task
 - End
 - Time
 - Discount
-	
+
+SerialNumber
+- SerialNumber: String
+
+Product 
+- product: String,
+- desc: String,
+- family: String,
+- price: Number,
+- summary: String,
+- author:  String,
+- createdAt:  Date,
+- haveSerial:Boolean,
+- serialNumbers: Array,
+        
 
 ### License
 

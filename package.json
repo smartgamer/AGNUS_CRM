@@ -9,7 +9,8 @@
     "bcrypt": "^1.0.3",
     "meteor-node-stubs": "~0.2.4",
     "mongodb": "~2.6.11",
-    "react": "^15.6.1",
+    "react": "^15.6.2",
+    "react-addons-pure-render-mixin": "^15.6.2",
     "react-dom": "^15.6.1",
     "simpl-schema": "^0.3.2",
     "tether": "^1.4.0"

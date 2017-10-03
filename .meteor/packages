@@ -4,18 +4,104 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
+###
+# Core Meteor Packages
+###
+
 meteor-base@1.1.0            # Packages every Meteor app needs to have
 mobile-experience@1.0.5       # Packages for a great mobile UX
-mongo@1.2.2                   # The database Meteor supports right now
 blaze-html-templates # Compile .html files into Meteor Blaze views
-session@1.1.7
-#jquery@1.11.10
-tracker@1.1.3                 # Meteor's client-side reactive programming library
-
-standard-minifiers@1.1.0       # CSS minifier run for production mode
 es5-shim@4.6.15                # ECMAScript 5 compatibility for older browsers
 ecmascript@0.8.2              # Enable ECMAScript2015+ syntax in app code
+audit-argument-checks@1.0.7   # ensure meteor method argument validation
+browser-policy@1.1.0          # security-related policies enforced by newer browsers
+juliancwirko:postcss          # CSS post-processing plugin (replaces standard-minifier-css)
+session@1.1.7                 # ReactiveDict whose contents are preserved across Hot Code Push
+tracker@1.1.3                 # Meteor transparent reactive programming library
+mongo@1.2.2                   # The database Meteor supports right now
+random@1.0.10
+reactive-var@1.0.11
+reactive-dict@1.1.9
+check@1.2.5
+http@1.2.12
+ddp-rate-limiter@1.0.7
+underscore@1.0.10
+logging@1.1.17
+reload@1.1.11
+ejson@1.0.14
+less@2.7.9
+service-configuration@1.0.11
+mdg:validated-method
+shell-server@0.2.4
+dynamic-import@0.1.3
+#jquery@1.11.10
 
+# Meteor Auth Packages
+accounts-base@1.3.3
+accounts-ui@1.1.9
+accounts-password@1.4.0
+accounts-facebook@1.2.1
+accounts-google@1.2.0
+accounts-twitter@1.3.0
+oauth-encryption@1.2.1
+facebook-config-ui@1.0.0
+google-config-ui@1.0.0
+twitter-config-ui@1.0.0
+
+
+
+# Community Packages
+abernix:standard-minifier-js
+alanning:roles
+aldeed:autoform
+#aldeed:collection2              
+aldeed:collection2-core
+aldeed:schema-index
+aldeed:template-extension
+aldeed:scheduled-tasks
+aldeed:autoform-bs-datepicker
+bozhao:accounts-instagram
+cfs:filesystem
+cfs:graphicsmagick
+cfs:gridfs
+cfs:standard-packages
+cfs:storage-adapter
+cfs:ui
+cfs:dropbox
+dispatch:run-as-user
+jparker:gravatar
+#juliancwirko:s-alert
+#juliancwirko:s-alert-staservice-configurationckslide
+kadira:dochead
+matb33:collection-hooks
+meteorhacks:ssr
+meteorhacks:subs-manager
+natestrauser:select2
+ongoworks:security
+raix:ui-dropped-event
+tmeasday:publish-counts
+vsivsi:job-collection@=1.4.0
+react-meteor-data
+percolate:migrations
+gadicc:blaze-react-component
+
+# Testing packages
+dburles:factory
+dispatch:mocha
+practicalmeteor:chai
+practicalmeteor:sinon
+johanbrook:publication-collector
+
+# Performance & Debugging Tools
+# meteorhacks:fast-render                   # improve initial page loads
+# meteortoys:allthings                      # developer tools
+# meteortoys:notifications                  # logging notification
+# meteorhacks:kadira                        # performance monitoring
+# meteorhacks:kadira-profiler               # cpu profiling
+# spiderable                                # adds phantomjs SEO rendering, use ongoworks:spiderable with Docker
+# meteorhacks:sikka                         # additional ddp, login security
+
+# Custom Packages
 kadira:flow-router
 kadira:blaze-layout
 erasaur:meteor-lodash
@@ -30,47 +116,19 @@ useraccounts:bootstrap
 useraccounts:flow-routing
 #useraccounts:famous-wrapper
 
-service-configuration@1.0.11
-accounts-ui@1.1.9
-accounts-password@1.4.0
-accounts-facebook@1.2.1
-accounts-google@1.2.0
-alanning:roles
-
 matb33:bootstrap-glyphicons
 zimme:active-route
 gwendall:auth-client-callbacks
 
-#aldeed:collection2-core@2.0.0
-#aldeed:simple-schema
-#aldeed:autoform
-#aldeed:autoform@=5.8.1
-
-aldeed:collection2-core
-aldeed:autoform
-aldeed:scheduled-tasks
-aldeed:schema-index
-
-#aldeed:autoform-bs-datepicker
-#aldeed:template-extension  #Ainda temos de analisar esta extensao muito interessante
-
 #meteortoys:allthings #Debug
 email@1.2.3
-meteorhacks:ssr@2.2.0   #Template dos emails
 aslagle:reactive-table
 coursierprive:tether
 twbs:bootstrap@=4.0.0-alpha2
 mrt:flash-messages
 momentjs:moment
-
 orgztion:meteor-global-tether
-mdg:validated-method
-
-#storage adapter packages
-cfs:standard-packages 
-cfs:filesystem
-cfs:s3
-cfs:dropbox
-
-vsivsi:job-collection
-cfs:gridfs
+#mizzao:timesync # POr ver
+deepwell:bootstrap-datepicker2
+drewy:datetimepicker
+mizzao:sharejs

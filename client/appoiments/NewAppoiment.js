@@ -1,5 +1,17 @@
 import { SSR } from 'meteor/meteorhacks:ssr';
 
+Template.NewAppoiment.hooks({
+    created() {
+        console.log("foo created");
+    },
+    rendered() {
+        console.log("foo rendered");
+    },
+    destroyed() {
+      console.log("foo destroyed");
+    },
+});
+
 Template.NewAppoiment.onCreated(function(){
     var self = this;
     
@@ -11,26 +23,10 @@ Template.NewAppoiment.onCreated(function(){
 Template.NewAppoiment.events({
     'click .fa-close': function(){
         Session.set('NewAppoiment',false);
-    },
-    'change .type':function(e,t){
-
-        var type= t.find('.type').value;
-
-        switch(type){
-            case 'Email': 
-                t.find('#insertRecordForm').fields="desc,summary,type,date,status,task"
-                console.log("Necessario limpar os dados dos Tasks")
-                break; 
-            case 'Task':
-                t.find('#insertRecordForm').fields="desc,summary,type,date,status,email"
-                console.log("Necessario limpar os dados dos Emails")
-                break;   
-        }
-
     }
-})
+});
 
-AutoForm.addHooks(['insertRecordForm'], {
+AutoForm.addHooks(['insertAppoimentForm'], {
     after:{
         insert: function(error, result){
             var emailData = {
@@ -51,6 +47,36 @@ AutoForm.addHooks(['insertRecordForm'], {
               );
         }
     },
+    // Called every time an update or typeless form
+  // is revalidated, which can be often if keyup
+  // validation is used.
+    formToModifier: function(modifier) {
+    // alter modifier
+    // return modifier;
+        myCreateFunc();
+        return modifier;
+
+    },
+
+    // Called every time an insert or typeless form
+  // is revalidated, which can be often if keyup
+  // validation is used.
+  formToDoc: function(doc) {
+    // alter doc
+    // return doc;
+    
+  },
+
+  // Called every time an update or typeless form
+  // is revalidated, which can be often if keyup
+  // validation is used.
+  formToModifier: function(modifier) {
+    // alter modifier
+    // return modifier;
+    
+  },
+
+  
     
     onSuccess: function(operation, result, template) {
         

@@ -1,0 +1,53 @@
+<template name="AppoimentSingle">
+    <div class="new-recipe-container">
+        <h1> {{appoiment.desc}}</h1>
+    
+        {{#autoForm collection="Appoiments" doc=appoiment type="readonly" id="FieldValueIsForm"}}
+        {{> afQuickField name="summary" }}
+        {{> afQuickField name="desc" }}
+        
+        {{> afQuickField name="date"}}
+        {{> afQuickField name="status" options="allowed" select=true}}
+        {{> afQuickField name="type" options="allowed" select=true}}
+        
+        {{#if afFieldValueIs name="type" value="Email"}}
+            <div class="card">
+                <div class="card-header">
+                    Email
+                </div>
+                <div class="card-block">
+                    <p class="card-text">{{> afQuickField name="email.from"}}</p>
+                    <p class="card-text">{{> afQuickField name="email.to"}}</p>
+                    <p class="card-text">{{> afQuickField name="email.cc"}}</p>
+                    <p class="card-text">{{> afQuickField name="email.bcc"}}</p>
+                    <p class="card-text">{{> afQuickField name="email.message"}}</p>
+                    <p class="card-text">{{> afQuickField name="email.template"}}</p>
+
+                </div>
+
+            </div>
+
+        {{/if}}
+        {{#if afFieldValueIs name="type" value="Task"}}
+            
+            <div class="card">
+                <div class="card-header">
+                    Task
+                </div>
+                <div class="card-block">
+                    <p class="card-text">{{> afQuickField name="task.begin"}}</p>
+                    <p class="card-text">{{> afQuickField name="task.end"}}</p>
+                    <p class="card-text">{{> afQuickField name="task.time"}}</p>
+                    <p class="card-text">{{> afQuickField name="task.Discount"}}</p>
+
+                </div>
+
+            </div>
+        {{/if}}
+
+        
+        
+    {{/autoForm}}
+    
+    </div>
+</template>

@@ -1,6 +1,24 @@
 <template name="NewProduct">
     <div class="new-recipe-container">
-        {{> quickForm collection="Products" id="insertProductForm" type="insert" class= "new-product-form"}}
+        
+        {{#autoForm collection="Products" type="insert" id="insertProductForm"}}
+            {{> afQuickField name="product" }}
+            {{> afQuickField name="desc" }}
+            {{> afQuickField name="family" }}
+            {{> afQuickField name="price" }}
+            {{> afQuickField name="summary" }}
+            {{> afQuickField name="author" }}
+
+            {{> afQuickField name="author" }}
+            {{> afQuickField name="createdAt" }}
+            {{> afQuickField name="haveSerial" }}
+
+            {{#if afFieldValueIs name="haveSerial" value=true }}
+                {{> afQuickField name="serialNumbers" value="true" }}
+
+            {{/if}}
+        {{/autoForm}}
+
     </div>
     
 </template>
