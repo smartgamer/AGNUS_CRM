@@ -62,7 +62,7 @@ AutoForm.addHooks(['insertRecordForm'], {
         
     },
     onError: function (name, error, template) {
-        console.log(name + " error:", error);
-        FlashMessages.sendError(name + " error:", error);
+        
+        FlashMessages.sendError(name + " error: "+ error);
     }
   });

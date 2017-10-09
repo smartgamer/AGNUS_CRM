@@ -1,8 +1,26 @@
 <template name="ProductSingle">
    
-    <section class="recipes">
-        <h1> {{product.desc}}</h1>
-    </section>
+    <div class="card">
+        <div class="card-block">
+            {{#autoForm collection="Products" doc=product type="readonly" id="insertProductForm"}}
+                {{> afQuickField name="product" }}
+                {{> afQuickField name="desc" }}
+                {{> afQuickField name="family" }}
+                {{> afQuickField name="price" }}
+                {{> afQuickField name="summary" }}
+                {{> afQuickField name="author" }}
+
+                {{> afQuickField name="author" }}
+                {{> afQuickField name="createdAt" }}
+                {{> afQuickField name="haveSerial" }}
+
+                {{#if afFieldValueIs name="haveSerial" value=true }}
+                    {{> afQuickField name="serialNumbers" value="true" }}
+
+                {{/if}}
+            {{/autoForm}}
+        </div>
+    </div>
    
     
    

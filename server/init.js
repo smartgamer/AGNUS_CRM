@@ -1,12 +1,7 @@
-//import { Meteor } from 'meteor/meteor';
+
 import { SSR, Template } from 'meteor/meteorhacks:ssr';
 
 Meteor.startup(() => {
-  
-  var base            = process.env.PWD;
-  var itemsLocation   = base + '/client/templates/';
-
-  //SSR.compileTemplate('RecordMailTemplate', Assets.getText(itemsLocation + 'RecordEmail.html'));
   
   // code to run on server at startup
   smtp = {
@@ -60,3 +55,4 @@ Meteor.startup(() => {
 Meteor.users.deny({
   update() { return true; }
 });
+

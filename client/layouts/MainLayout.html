@@ -1,20 +1,33 @@
 <template name="MainLayout">
+
+
     
-    <div class="nav">
-        {{> Header}}
-        {{> Template.dynamic template=nav}}
+    {{> Header}}
+
+    <div class="row">{{> Breadcrumb}}    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            {{> SideNav}}
+            <main class="col-md-9 col-xs-11 p-l-2 p-t-2">
+                <a href="#sidebar" data-toggle="collapse"><i class="fa fa-navicon fa-lg"></i></a>
+                <hr>
+                
+                {{> Template.dynamic template=main}}
+                
+                
+
+            </main>
+        </div>
+        
     </div>
-    
-    <div class="content">
-        {{> Template.dynamic template=main}}
-    </div>
-    
+
+
     <footer>
-        {{> Template.dynamic template=footer}}
-        {{> SideNav}}
+            {{> Template.dynamic template=footer}}
+            
+            <div id="footer">Teste</div>
     </footer>
-
-
 
 </template>
 
