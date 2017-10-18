@@ -1,5 +1,7 @@
 import { SSR, Template } from 'meteor/meteorhacks:ssr';
 
+///Por analisar
+
 EmailGenerator = {};
 
 EmailGenerator.addTemplates = function(templates) {
