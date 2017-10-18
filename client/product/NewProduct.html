@@ -1,23 +1,52 @@
 <template name="NewProduct">
-    <div class="new-recipe-container">
+    <div class="rows">
         
         {{#autoForm collection="Products" type="insert" id="insertProductForm"}}
-            {{> afQuickField name="product" }}
-            {{> afQuickField name="desc" }}
-            {{> afQuickField name="family" }}
-            {{> afQuickField name="price" }}
-            {{> afQuickField name="summary" }}
-            {{> afQuickField name="author" }}
+        
 
-            {{> afQuickField name="author" }}
-            {{> afQuickField name="createdAt" }}
-            {{> afQuickField name="haveSerial" }}
+        
 
-            {{#if afFieldValueIs name="haveSerial" value=true }}
-                {{> afQuickField name="serialNumbers" value="true" }}
+        <div class="rows">
+            <fieldset>
+                <legend>New Product</legend>
 
-            {{/if}}
+                <div class="col s6 ">
+                        {{> afQuickField name="product" }}
+                        {{> afQuickField name="desc" }}
+                        {{> afQuickField name="family" }}
+                        {{> afQuickField name="price" }}
+                        {{> afQuickField name="summary" }}
+                        {{> afQuickField name="author" }}
+                        {{> afQuickField name="createdAt" }}
+                        {{> afQuickField name="haveSerial" }}
+            
+                        {{#if afFieldValueIs name="haveSerial" value=true }}
+                            {{> afQuickField name="serialNumbers" value="true" }}
+            
+                        {{/if}}
+                </div>
+            </fieldset>
+        </div>
+        <div class="divider"></div>
+        <div class="rows">
+                <button type="reset" class="btn waves-effect waves-light">
+                    <i class="material-icons right">cancel</i>
+                    Reset 
+                </button>    
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                     <i class="material-icons right">send</i>
+                </button>
+                <button class="product-close btn waves-effect waves-light" type="submit" name="action"> Close
+                    <i class="material-icons right">close</i>
+                </button>
+                    
+        </div>
+        
         {{/autoForm}}
+
+
+        
+        
 
     </div>
     

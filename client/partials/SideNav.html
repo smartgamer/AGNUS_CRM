@@ -1,38 +1,18 @@
 <template name="SideNav">
-    
-        <div class="col-md-3 col-xs-1 p-l-0 p-r-0 collapse in" id="sidebar">
-                <div class="list-group panel">
-                    <a href="/" class="list-group-item collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
-                        <i class="fa fa-dashboard"></i> <span class="hidden-sm-down">Home</span> </a>
-                    <div class="collapse" id="menu1">
-                        <a href="#menu1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">Subitem 1 </a>
-                        <div class="collapse" id="menu1sub1">
-                            <a href="#" class="list-group-item" data-parent="#menu1sub1">Subitem 1 a</a>
-                            <a href="#" class="list-group-item" data-parent="#menu1sub1">Subitem 2 b</a>
-                            <a href="#menu1sub1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">Subitem 3 c </a>
-                            <div class="collapse" id="menu1sub1sub1">
-                                <a href="#" class="list-group-item" data-parent="#menu1sub1sub1">Subitem 3 c.1</a>
-                                <a href="#" class="list-group-item" data-parent="#menu1sub1sub1">Subitem 3 c.2</a>
-                            </div>
-                            <a href="#" class="list-group-item" data-parent="#menu1sub1">Subitem 4 d</a>
-                            <a href="#menu1sub1sub2" class="list-group-item" data-toggle="collapse"  aria-expanded="false">Subitem 5 e </a>
-                            <div class="collapse" id="menu1sub1sub2">
-                                <a href="#" class="list-group-item" data-parent="#menu1sub1sub2">Subitem 5 e.1</a>
-                                <a href="#" class="list-group-item" data-parent="#menu1sub1sub2">Subitem 5 e.2</a>
-                            </div>
-                        </div>
-                        <a href="#" class="list-group-item" data-parent="#menu1">Subitem 2</a>
-                        <a href="#" class="list-group-item" data-parent="#menu1">Subitem 3</a>
-                    </div>
-
-                    <a href="/products" class="list-group-item collapsed" data-parent="#sidebar">
-                        <i class="fa fa-product-hunt"></i> <span class="hidden-sm-down">Product</span>
-                    </a>
-
-                    <a href="/accounts" class="list-group-item collapsed" data-parent="#sidebar">
-                        <i class="fa fa-user"></i> <span class="hidden-sm-down">Accounts</span>
-                    </a>
-                    
-                </div>
+    <ul id="slide-out" class="side-nav">
+        <li class="search">
+            <div class="search-wrapper card">
+                <input id="search"><i class="material-icons">search</i>
+                <div class="search-results"></div>
             </div>
+        </li>
+
+        <li><a href="/"><i class="material-icons right">home</i> <span class="hidden-sm-down">Home</span> </a></li>
+        <li><a href="/products"><i class="material-icons right">local_parking</i> <span class="hidden-sm-down">Product</span></a></li>
+        <li><a href="/accounts"><i class="material-icons right">account_circle</i> <span class="hidden-sm-down">Accounts</span></a></li>
+        
+         
+    </ul>
+    
+
 </template>

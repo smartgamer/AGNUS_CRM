@@ -1,9 +1,14 @@
 <template name="Header">
-    <header>
-        <h1>AGNUS CRM </h1>
-        {{> loginButtons}}
-    </header>
-
     
+    <a class="btn btn-floating button-collapse left" href="#" data-activates="slide-out"><i class="fa fa-bars"></i></a>
+        
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">AGNUS CRM</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>{{> loginButtons}}</li>
+            </ul>
+        </div>
+    </nav>
     
 </template>

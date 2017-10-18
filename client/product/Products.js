@@ -39,12 +39,14 @@ Template.Products.events({
 });
 
 Template.Products.events({
-  'click .ListProducts tbody tr': function (event) {
-    // set the blog post we'll display details and news for
-    var post = this;
-    console.log(post._id);
-    FlowRouter.setParams({id: post._id});
-    FlowRouter.go('/product/' + post._id);
-  }
+    'click .ListProducts tbody tr': function (event) {
+        // set the blog post we'll display details and news for
+        var post = this;
+        FlowRouter.setParams({id: post._id});
+        FlowRouter.go('/product/' + post._id);
+    },
+    'click .new-Product': function(){
+        Session.set('NewProduct',true);
+    }
 });
 

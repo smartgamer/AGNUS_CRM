@@ -2,7 +2,11 @@
     {{#if $.Session.get 'NewAppoiment'}} 
         {{> NewAppoiment}}
     {{else}}
-        <button class="new-Appoiment"> New Appoiment </button>
+        <button class="new-Appoiment waves-effect waves-light btn">
+            <i class="fa fa-plus left"></i> 
+            New 
+        </button>
+
     {{/if}}
     <section class="ListAccounts recipe">
         {{#if Template.subscriptionsReady}}

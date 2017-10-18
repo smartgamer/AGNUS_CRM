@@ -4,7 +4,7 @@ Template.registerHelper( 'dateTime', ( timestamp ) => {
           date           = momentToFormat.format( 'MMMM Do, YYYY' ),
           time           = momentToFormat.format( 'hh:mm a' );
   
-      return `${ date } at ${ time }`;
+      return '${ date } at ${ time }';
     }
   });
 
@@ -13,4 +13,8 @@ Template.registerHelper( 'dateTime', ( timestamp ) => {
     
     this.$('.datepicker').datepicker();
     this.$('.datetimepicker').datetimepicker();
+    // Initialize collapse button
+    this.$(".button-collapse").sideNav();
+    // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+    //$('.collapsible').collapsible();
   });

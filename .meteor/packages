@@ -8,6 +8,7 @@
 # Core Meteor Packages
 ###
 
+
 meteor-base@1.1.0            # Packages every Meteor app needs to have
 mobile-experience@1.0.5       # Packages for a great mobile UX
 blaze-html-templates # Compile .html files into Meteor Blaze views
@@ -114,7 +115,9 @@ raix:handlebar-helpers
 #User And Accounts
 useraccounts:bootstrap
 useraccounts:flow-routing
+useraccounts:materialize
 #useraccounts:famous-wrapper
+
 
 matb33:bootstrap-glyphicons
 zimme:active-route
@@ -132,4 +135,7 @@ orgztion:meteor-global-tether
 deepwell:bootstrap-datepicker2
 drewy:datetimepicker
 mizzao:sharejs
+
 lookback:tooltips
+materialize:materialize
+zodiase:material-design-icons-fonts

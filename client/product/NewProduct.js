@@ -7,7 +7,7 @@ Template.NewProduct.onCreated(function(){
 });
 
 Template.NewProduct.events({
-    'click .fa-close': function(){
+    'click .product-close': function(){
         Session.set('NewProduct',false);
     }
 })
