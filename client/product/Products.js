@@ -3,6 +3,7 @@ Template.Products.onCreated(function(){
 
     self.autorun(function(){
         self.subscribe('products');
+        self.subscribe('familys');
     });
 });
 
@@ -22,7 +23,15 @@ Template.Products.helpers({
                 { key: 'product', label: 'Name' },
                 { key: 'desc', label: 'Description' },
                 { key: 'summary', label: 'Summary' },
-                {key:'family',label:'Family'}
+                { key:'family',label:'Family', 
+                    fn: function (value, object, key) {    
+                        var family = Familys.findOne({
+                            _id: value
+                        });
+                        return family.desc;
+                        
+                    }
+                }
                 
             ],
             useFontAwesome: true,

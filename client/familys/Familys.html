@@ -1,0 +1,17 @@
+<template name="Familys">
+    
+    {{#if $.Session.get 'NewFamily'}} 
+        {{> NewFamily}}
+    {{else}}
+        <button class="new-Family waves-effect waves-light btn">
+            <i class="fa fa-plus left"></i> 
+            New 
+        </button>
+        <div class="divider"></div>
+    {{/if}}
+    
+    <section class="ListFamily recipe">
+        {{> reactiveTable class="table table-striped table-hover ListFamilys" settings=settings }}
+    </section>
+
+</template>

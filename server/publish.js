@@ -12,6 +12,10 @@ Meteor.publish('products',function(){
     return Products.find({});
 });
 
+Meteor.publish('familys',function(){
+    return Familys.find({});
+});
+
 Meteor.publish('accounts',function(){
     return Accounts.find({});
 });
@@ -27,6 +31,18 @@ Meteor.publish('appoiments',function(){
 ReactiveTable.publish("productsList",
     function () {
             return Products;
+    }
+);
+
+ReactiveTable.publish("productsList",
+function () {
+        return Products;
+}
+);
+
+ReactiveTable.publish("familysList",
+    function () {
+            return Familys;
     }
 );
 

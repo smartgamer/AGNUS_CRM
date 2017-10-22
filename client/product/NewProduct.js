@@ -3,6 +3,7 @@ Template.NewProduct.onCreated(function(){
     
     self.autorun(function(){
         self.subscribe('products');
+        self.subscribe('familys');
     });
 });
 

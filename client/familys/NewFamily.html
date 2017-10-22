@@ -1,0 +1,41 @@
+<template name="NewFamily">
+    <div class="rows">
+        
+        {{#autoForm collection="Familys" type="insert" id="insertFamilyForm"}}
+
+        <div class="rows">
+            <fieldset>
+                <legend>New Product</legend>
+
+                <div class="col s6 ">
+                        {{> afQuickField name="family" }}
+                        {{> afQuickField name="desc" }}
+                        {{> afQuickField name="summary" }}
+                        
+                </div>
+            </fieldset>
+        </div>
+        <div class="divider"></div>
+        <div class="rows">
+                <button type="reset" class="btn waves-effect waves-light">
+                    <i class="material-icons right">cancel</i>
+                    Reset 
+                </button>    
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                     <i class="material-icons right">send</i>
+                </button>
+                <button class="family-close btn waves-effect waves-light" type="reset" name="action"> Close
+                    <i class="material-icons right">close</i>
+                </button>
+                    
+        </div>
+        
+        {{/autoForm}}
+
+
+        
+        
+
+    </div>
+    
+</template>
