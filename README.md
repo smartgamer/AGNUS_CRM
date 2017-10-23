@@ -2,62 +2,29 @@
 
 AGNUS_CRM is Open Source CRM Build on Meteor.JS + MONGDB + BlazeTemplates.
 
-##Database
+#Quick Start
 
-Records
-- id
-- desc
-- summary
-- account 
-- author
-- createdAt
-- openAt	
-- status:  ['Open','In Progress','Canceled','Close','Done']
-- ListAppoiments       
+On Windows, the installer can be found at https://www.meteor.com/install.
+
+On Linux/macOS, use this line:
+
+{
+    curl https://install.meteor.com/ | sh
+}
+
+Create a project:
+
+{
+    meteor create agnus_crm
     
+}
+Run it:
 
-Appoiment
-- id
-- desc
-- summary
-- type [ Email, Task, Meeting, Call] 
-- account_Id
-- record_Id
-- CreatedAt
-- Date
-- Author
-- Status [Open, Close]
-
-Email 
-- from,
-- To : String List
-- CC : String List
-- BCC : String List
-- Message : Text
-- Template :  HTML
-	
-	
-Task
-- Date
-- Begin
-- End
-- Time
-- Discount
-
-SerialNumber
-- SerialNumber: String
-
-Product 
-- product: String,
-- desc: String,
-- family: String,
-- price: Number,
-- summary: String,
-- author:  String,
-- createdAt:  Date,
-- haveSerial:Boolean,
-- serialNumbers: Array,
-        
+cd agnus_crm
+{
+    git clone https://github.com/gmahota/AGNUS_CRM.git
+    meteor
+}
 
 ### License
 
