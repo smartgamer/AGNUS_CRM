@@ -22,7 +22,7 @@
     "immutable": "^3.8.2",
     "meteor-node-stubs": "~0.2.4",
     "moment": "^2.19.1",
-    "mongodb": "~2.6.11",
+    "mongodb": "2.2.30",
     "node-geocoder": "^3.21.0",
     "node-loggly-bulk": "^2.0.2",
     "nodemailer-wellknown": "^0.2.3",
