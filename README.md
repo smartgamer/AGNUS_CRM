@@ -2,6 +2,9 @@
 
 AGNUS_CRM is Open Source CRM Build on Meteor.JS + MONGDB + BlazeTemplates.
 
+#Issues Tracker
+https://waffle.io/gmahota/AGNUS_CRM
+
 #Quick Start
 
 On Windows, the installer can be found at https://www.meteor.com/install.
