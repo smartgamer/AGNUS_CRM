@@ -1,19 +1,19 @@
-Template.Accounts.onCreated(function(){
+Template.Customers.onCreated(function(){
     var self = this;
 
     self.autorun(function(){
-        self.subscribe('accounts');
+        self.subscribe('customers');
     });
 });
 
-Template.Accounts.helpers({
-    accounts: () => {
-        return Accounts.find({});
+Template.Customers.helpers({
+    customers: () => {
+        return Customers.find({});
     },
 
     settings: function () {
         return {
-            collection: 'accountsList',
+            collection: 'customersList',
             rowsPerPage: 5,
             showFilter: true,
             showNavigation: 'auto',
@@ -22,33 +22,27 @@ Template.Accounts.helpers({
                 { key: 'code', label: 'Code' },
                 { key: 'name', label: 'Name' },
                 { key: 'telphone', label: 'Telphone' },
-                { key: 'email', label: 'Email' }
+                { key: 'email', label: 'Email' },
+                { key: 'productPriceVariant',label:'PVP'}
                 
                 
             ],
             useFontAwesome: true,
-            rowClass:'',
-            group: 'accounts'
+            rowClass:''
         };
     }
 });
 
-Template.Accounts.events({
-    'click .newAccount':function(){
-        FlowRouter.go('account_New');
-    }
-});
-
-Template.Accounts.events({
-  'click .ListAccounts tbody tr': function (event) {
+Template.Customers.events({
+  'click .ListCustomers tbody tr': function (event) {
     // set the blog post we'll display details and news for
     var post = this;
     console.log(post._id);
     FlowRouter.setParams({id: post._id});
-    FlowRouter.go('/account/' + post._id);
+    FlowRouter.go('/customer/' + post._id);
   },
-  'click .new-Account': function(){
-      Session.set('NewAccount',true);
+  'click .new-Customer': function(){
+      Session.set('NewCustomer',true);
   }
 });
 

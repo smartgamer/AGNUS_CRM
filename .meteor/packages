@@ -114,7 +114,7 @@ raix:handlebar-helpers
 
 #User And Accounts
 #useraccounts:bootstrap
-#useraccounts:flow-routing
+useraccounts:flow-routing
 useraccounts:materialize
 #useraccounts:famous-wrapper
 
@@ -132,7 +132,6 @@ mrt:flash-messages
 momentjs:moment
 orgztion:meteor-global-tether
 #mizzao:timesync # POr ver
-deepwell:bootstrap-datepicker2
 drewy:datetimepicker
 mizzao:sharejs
 

@@ -13,6 +13,7 @@ Template.registerHelper( 'dateTime', ( timestamp ) => {
     
     this.$('.datepicker').datepicker();
     this.$('.datetimepicker').datetimepicker();
+    
     // Initialize collapse button
     this.$(".button-collapse").sideNav();
     this.$('.button-collapse').sideNav({

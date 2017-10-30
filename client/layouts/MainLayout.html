@@ -1,21 +1,16 @@
 <template name="MainLayout">
 
-
-    
-    {{> Header}}
-
+        {{> Header}}
     {{> SideNav}}
-
-    <div class="container">
-        <div class="cl s12">
-            
-            {{> Template.dynamic template=main}}
-
-            
+    <main>
+        <div class="container">
+                
+                {{> Template.dynamic template=main}}
+                         
         </div>
-        
-    </div>
-
+            
+    </main>
+    
 
     <footer>
             {{> Template.dynamic template=footer}}

@@ -1,0 +1,39 @@
+<template name="NewCustomer">
+        
+        {{#autoForm collection="Customers" type="insert" id="insertCustomerForm" novalidate="keyup"}}
+        
+        <div>
+            <button type="submit" class="btn">Submit</button>
+            <button type="reset" class="btn">Reset</button>
+            <button class="btn btn-danger ">
+                    <i class="fa fa-close"></i>
+            </button>
+            
+        </div>
+        <div class="card">
+            
+            <fieldset>
+                <legend>Add a Customer</legend> 
+                        {{> afQuickField name="code"}}
+                        
+                        {{> afQuickField name="name" }}
+                    
+                        {{> afQuickField name="desc" }}
+                        
+                        {{> afQuickField name="email"}}
+
+                        {{> afQuickField name="contact"}}
+                        
+                        {{> afQuickField name="productPriceVariant" options="allowed" select=true}}
+                    
+            </fieldset>    
+                
+            
+                
+        </div>   
+    {{/autoForm}}
+
+
+
+
+</template>

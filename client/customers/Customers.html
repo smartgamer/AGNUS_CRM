@@ -1,0 +1,17 @@
+<template name="Customers">
+        
+   
+       {{#if $.Session.get 'NewCustomer'}} 
+           {{> NewCustomer}}
+       {{else}}
+           <button class="new-Customer waves-effect waves-light btn">
+               <i class="fa fa-plus left"></i> 
+               New 
+           </button>
+           <div class="divider"></div>
+       {{/if}}
+        
+       {{> reactiveTable class="striped highlight ListCustomers" settings=settings }}
+       
+   
+   </template>

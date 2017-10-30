@@ -8,10 +8,6 @@ Meteor.publish('recipes',function(){
     return Recipes.find({author:this.userId});
 });
 
-Meteor.publish('products',function(){
-    return Products.find({});
-});
-
 Meteor.publish('familys',function(){
     return Familys.find({});
 });
@@ -27,18 +23,6 @@ Meteor.publish('records',function(){
 Meteor.publish('appoiments',function(){
     return Appoiments.find({});
 });
-
-ReactiveTable.publish("productsList",
-    function () {
-            return Products;
-    }
-);
-
-ReactiveTable.publish("productsList",
-function () {
-        return Products;
-}
-);
 
 ReactiveTable.publish("familysList",
     function () {

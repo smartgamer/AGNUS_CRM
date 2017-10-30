@@ -1,12 +1,19 @@
 <template name="Accounts">
-        
-    <button href="/accounts/newAccount/" class="newAccount waves-effect waves-light btn">
-        <i class="fa fa-plus left"></i> 
-        New 
-    </button>
+     
+
+    {{#if $.Session.get 'NewAccount'}} 
+        {{> NewAccount}}
+    {{else}}
+        <button class="new-Account waves-effect waves-light btn">
+            <i class="fa fa-plus left"></i> 
+            New 
+        </button>
+        <div class="divider"></div>
+    {{/if}}
+
 
     <section class="ListAccounts recipe">
-        {{> reactiveTable class="table table-striped table-hover ListAccounts" settings=settings }}
+        {{> reactiveTable class="striped highlight ListAccounts" settings=settings }}
     </section>
 
 </template>
