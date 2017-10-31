@@ -1,8 +1,19 @@
 
 import { SSR, Template } from 'meteor/meteorhacks:ssr';
+import { Accounts } from 'meteor/accounts-base';
 
 Meteor.startup(() => {
-  
+  if(!Meteor.users.find().count()) {
+    var options = {
+      username: 'guimaraesmahota@gmail.com', 
+      password: 'Agnes270115!', 
+      email: 'guimaraesmahota@gmail.com'
+    };
+    Accounts.createUser(options);
+  }
+
+
+
   // code to run on server at startup
   smtp = {
     username: 'guimaraesmahota@gmail.com',   // eg: server@gentlenode.com

@@ -31,8 +31,7 @@ cd agnus_crm
 
 ### Suport Us
 
-<img src="http://img.shields.io/gratipay/user/zzzeek.svg">
-[![](http://img.shields.io/gratipay/user/zzzeek.svg)]()
+[![Gratipay](https://img.shields.io/gratipay/project/AGNUS-CRM.svg)](https://gratipay.com/AGNUS-CRM/)
 
 ### License
 
