@@ -35,6 +35,8 @@ cd agnus_crm
 
 [![Gratipay](https://img.shields.io/gratipay/project/AGNUS-CRM.svg)](https://gratipay.com/AGNUS-CRM/)
 
+https://travis-ci.org/gmahota/AGNUS_CRM
+
 ### License
 
 Copyright © [GNU General Public License v3.0](./LICENSE.md)
