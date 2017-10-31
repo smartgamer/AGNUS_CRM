@@ -12,8 +12,6 @@ Meteor.startup(() => {
     Accounts.createUser(options);
   }
 
-
-
   // code to run on server at startup
   smtp = {
     username: 'guimaraesmahota@gmail.com',   // eg: server@gentlenode.com
@@ -43,18 +41,6 @@ Meteor.startup(() => {
       $set: {
         "appId": "XXXXXXXXXXXXXXX",
         "secret": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-      }
-    },
-    { upsert: true }
-  );
-
-  // Add GitHub configuration entry
-  ServiceConfiguration.configurations.update(
-    { "service": "github" },
-    {
-      $set: {
-        "clientId": "XXXXXXXXXXXXXXXXXXXX",
-        "secret": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
       }
     },
     { upsert: true }
