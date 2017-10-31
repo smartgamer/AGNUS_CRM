@@ -29,6 +29,11 @@ cd agnus_crm
     meteor
 }
 
+### Suport Us
+
+<img src="http://img.shields.io/gratipay/user/zzzeek.svg">
+[![](http://img.shields.io/gratipay/user/zzzeek.svg)]()
+
 ### License
 
 Copyright © [GNU General Public License v3.0](./LICENSE.md)

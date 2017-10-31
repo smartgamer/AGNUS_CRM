@@ -18,8 +18,8 @@ Meteor.startup(() => {
     { "service": "facebook" },
     {
       $set: {
-        "appId": "XXXXXXXXXXXXXXX",
-        "secret": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        "appId": "1527268020642572",
+        "secret": "483bf4e113bfee483b34a6493e9939f3"
       }
     },
     { upsert: true }
