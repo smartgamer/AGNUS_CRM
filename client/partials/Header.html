@@ -1,12 +1,27 @@
 <template name="Header">
-   
-    <nav>
-        <div class="nav-wrapper">
-            <a href="/" class="brand-logo">AGNUS CRM</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li>{{> loginButtons}}</li>
-            </ul>
+        
+    <header>
+              
+        <div class="announcement">
+                      
+                <div class="container">Version 1.0 is coming soon! See this
+                    <a href="https://github.com/gmahota/AGNUS_CRM"> GitHub post</a> 
+                    for more information.
+                    <div class="rigth">{{> loginButtons}}</div> 
+                </div>
+                
         </div>
-    </nav>
+                  
+        
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">AGNUS CRM</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
     
 </template>
