@@ -4,16 +4,20 @@
         {{#autoForm collection="Familys" type="insert" id="insertFamilyForm"}}
 
         <div class="rows">
-            <fieldset>
-                <legend>New Product</legend>
+            <div class="card">
+                    <fieldset>
+                            <legend>New Family</legend>
+            
+                            <div class="col s6 ">
+                                    {{> afQuickField name="family" }}
+                                    {{> afQuickField name="desc" }}
+                                    {{> afQuickField name="summary" }}
+                                    
+                            </div>
+                        </fieldset>
+            </div>
 
-                <div class="col s6 ">
-                        {{> afQuickField name="family" }}
-                        {{> afQuickField name="desc" }}
-                        {{> afQuickField name="summary" }}
-                        
-                </div>
-            </fieldset>
+            
         </div>
         <div class="divider"></div>
         <div class="rows">

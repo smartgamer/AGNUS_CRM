@@ -111,8 +111,6 @@ livedata@1.0.18
 localstorage@1.1.1
 logging@1.1.17
 lookback:tooltips@0.6.1
-matb33:bootstrap-base@10.0.0
-matb33:bootstrap-glyphicons@10.0.0
 matb33:collection-hooks@0.8.4
 materialize:materialize@0.100.2
 mdg:validated-method@1.1.0

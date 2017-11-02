@@ -6,37 +6,41 @@
 
         
 
-        <div class="rows">
+        <div class="row">
             <fieldset>
                 <legend>New Product</legend>
 
-                <div class="col s3 ">
-
-                    
-                        {{> afQuickField name="product" }}
-                        {{> afQuickField name="desc" }}
-                        {{> afQuickField name="family" }}
-                        {{> afQuickField name="price" }}
-                        {{> afQuickField name="summary" }}
-                        {{> afQuickField name="author" }}
-                        {{> afQuickField name="createdAt" }}
-                        {{> afQuickField name="haveSerial" }}
-            
-                        {{#if afFieldValueIs name="haveSerial" value=true }}
-                            {{> afQuickField name="serialNumbers" value="true" }}
-            
-                        {{/if}}
-
-                        
+                <div class="contaneir">
+                        <div class="col s4 ">
+                                
+                                                    
+                            {{> afQuickField name="product" }}
+                            {{> afQuickField name="desc" }}
+                            {{> afQuickField name="family" }}
+                            {{> afQuickField name="price" }}
+                            {{> afQuickField name="summary" }}
+                            {{> afQuickField name="author" }}
+                            {{> afQuickField name="createdAt" }}
+                            {{> afQuickField name="haveSerial" }}
+                                                                   
+                        </div>
+                        <div class="col s4">
+                                {{> afQuickField name="productPriceVariant.price1"}}
+                                {{> afQuickField name="productPriceVariant.price2"}}
+                                {{> afQuickField name="productPriceVariant.price3"}}
+                                {{> afQuickField name="productPriceVariant.price4"}}
+                                {{> afQuickField name="productPriceVariant.price5"}}
+                                {{> afQuickField name="productPriceVariant.price6"}}
+                        </div>
+                        <div class="col s4">
+                            {{#if afFieldValueIs name="haveSerial" value=true }}
+                                {{> afQuickField name="serialNumbers" value="true" }}
+                                            
+                            {{/if}}
+                        </div>
                 </div>
-                <div class="col s2">
-                        {{> afQuickField name="productPriceVariant.price1"}}
-                        {{> afQuickField name="productPriceVariant.price2"}}
-                        {{> afQuickField name="productPriceVariant.price3"}}
-                        {{> afQuickField name="productPriceVariant.price4"}}
-                        {{> afQuickField name="productPriceVariant.price5"}}
-                        {{> afQuickField name="productPriceVariant.price6"}}
-                </div>
+                
+                
             </fieldset>
         </div>
         <div class="divider"></div>

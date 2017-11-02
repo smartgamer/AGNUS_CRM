@@ -120,7 +120,7 @@ useraccounts:materialize
 #useraccounts:famous-wrapper
 
 
-matb33:bootstrap-glyphicons
+#matb33:bootstrap-glyphicons
 zimme:active-route
 gwendall:auth-client-callbacks
 
