@@ -1,8 +1,12 @@
 
 import { SSR, Template } from 'meteor/meteorhacks:ssr';
 import { Accounts } from 'meteor/accounts-base';
+import React from 'react';
+import { render } from 'react-dom';
+//import { renderRoutes } from '../imports/startup/client/routes.js';
 
 Meteor.startup(() => {
+  
   if(!Meteor.users.find().count()) {
     var options = {
       username: 'guimaraesmahota@gmail.com', 

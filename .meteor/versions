@@ -17,6 +17,7 @@ aldeed:schema-index@2.0.0
 aldeed:template-extension@4.1.0
 allow-deny@1.0.9
 anti:i18n@0.4.3
+arillo:flow-router-helpers@0.5.2
 aslagle:reactive-table@0.8.42
 audit-argument-checks@1.0.7
 autoupdate@1.3.12
@@ -118,6 +119,7 @@ meteor@1.7.2
 meteor-base@1.1.0
 meteorhacks:async@1.0.0
 meteorhacks:npm@1.5.0
+meteorhacks:picker@1.0.3
 meteorhacks:ssr@2.2.0
 meteorhacks:subs-manager@1.6.4
 minifier-css@1.2.16

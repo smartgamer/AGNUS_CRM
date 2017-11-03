@@ -11,7 +11,6 @@
 
 meteor-base@1.1.0            # Packages every Meteor app needs to have
 mobile-experience@1.0.5       # Packages for a great mobile UX
-blaze-html-templates # Compile .html files into Meteor Blaze views
 es5-shim@4.6.15                # ECMAScript 5 compatibility for older browsers
 ecmascript@0.8.3              # Enable ECMAScript2015+ syntax in app code
 audit-argument-checks@1.0.7   # ensure meteor method argument validation
@@ -48,7 +47,8 @@ oauth-encryption@1.2.1
 facebook-config-ui@1.0.0
 google-config-ui@1.0.0
 twitter-config-ui@1.0.0
-
+meteorhacks:picker
+arillo:flow-router-helpers
 
 
 # Community Packages
@@ -62,6 +62,7 @@ aldeed:template-extension
 aldeed:scheduled-tasks
 aldeed:autoform-bs-datepicker
 #bozhao:accounts-instagram
+
 cfs:filesystem
 cfs:graphicsmagick
 cfs:gridfs
@@ -69,6 +70,7 @@ cfs:standard-packages
 cfs:storage-adapter
 cfs:ui
 cfs:dropbox
+
 dispatch:run-as-user
 jparker:gravatar
 #juliancwirko:s-alert
@@ -85,6 +87,7 @@ vsivsi:job-collection@=1.5.2
 react-meteor-data
 percolate:migrations
 gadicc:blaze-react-component
+
 
 # Testing packages
 dburles:factory
@@ -144,3 +147,4 @@ meteorhacks:npm
 meteorhacks:async 
 
 npm-container
+blaze-html-templates
