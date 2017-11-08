@@ -2,7 +2,25 @@
    
     <div class="card">
         <div class="card-block">
+            <button class="new-Product waves-effect waves-light btn">
+                <i class="fa fa-plus left"></i> New 
+            </button>
+
+            <button class="new-Product waves-effect waves-light btn">
+                <i class="fa fa-plus left"></i> Edit 
+            </button>
+            <button class="new-Product waves-effect waves-light btn">
+                <i class="fa fa-plus left"></i> Close 
+            </button>
+            
+            <div class="divider"></div>
+        </div>
+
+
+        <div class="card-block">
             {{#autoForm collection="Products" doc=product type="readonly" id="insertProductForm"}}
+                {{> afQuickField name="picture"}}
+            
                 {{> afQuickField name="product" }}
                 {{> afQuickField name="desc" }}
                 {{> afQuickField name="family" }}

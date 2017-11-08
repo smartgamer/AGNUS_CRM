@@ -71,6 +71,10 @@ cfs:storage-adapter
 cfs:ui
 cfs:dropbox
 
+ostrio:autoform-files
+ostrio:files
+dburles:mongo-collection-instances
+
 dispatch:run-as-user
 jparker:gravatar
 #juliancwirko:s-alert

@@ -4,7 +4,11 @@ Template.NewProduct.onCreated(function(){
     self.autorun(function(){
         self.subscribe('products');
         self.subscribe('familys');
+        self.subscribe('files.images.all');
+        console.log('Ola Mundo');
     });
+    
+    
 });
 
 Template.NewProduct.events({
