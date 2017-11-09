@@ -16,6 +16,19 @@
                     </ul>
                 </nav>
             </div>
+
+            <div class="row">
+                {{#if Template.subscriptionsReady}}
+                <div class="card-group">
+                    {{#each products}}
+                        {{> Product}}
+                    {{/each}}
+                </div>
+                    
+                {{else}}
+                    <p>Loading</p>
+                {{/if}}
+            </div>
         </div>        
        
 </template>
