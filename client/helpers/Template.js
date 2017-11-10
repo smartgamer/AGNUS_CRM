@@ -27,8 +27,8 @@ Template.registerHelper( 'dateTime', ( timestamp ) => {
     });
     // Initialize all datepicker inputs whenever any template is rendered
     
-    this.$('.datepicker').datepicker();
-    this.$('.datetimepicker').datetimepicker();
+    //this.$('.datepicker').datepicker();
+    //this.$('.datetimepicker').datetimepicker();
     
     
    
