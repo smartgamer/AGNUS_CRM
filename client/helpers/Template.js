@@ -9,8 +9,12 @@ Template.registerHelper( 'dateTime', ( timestamp ) => {
   });
 
   Template.onRendered(function () {
+    this.$('.collapsible').collapsible({
+      accordion: false// A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
     // Initialize collapse button
     
+
     this.$('.button-collapse').sideNav({
       menuWidth: 200, // Default is 300
       edge: 'left', // Choose the horizontal origin

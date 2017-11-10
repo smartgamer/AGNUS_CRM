@@ -4,41 +4,57 @@
         
         {{#autoForm collection="Accounts" type="insert" id="insertProductForm"}}
         <div class="row">
+            <div class="col 12">
+                
+                <!-- <ul class="collapsible" data-collapsible='expandable'>
+                    <li>
+                        <div class="collapsible-header active"><i class="material-icons">Gender</i>General Info</div>
+                        <div class="collapsible-body"> -->
+                                <div class="contaneir">
+                                    <div class="col s4 ">
+                                
+                                
+                                        {{> afQuickField name="code" }} {{> afQuickField name="name" }} {{> afQuickField name="firstName" }} {{> afQuickField name="surname"
+                                        }}
+                                
+                                    </div>
+                                    <div class="col s4">
+                                        {{> afQuickField name="age" }} {{> afQuickField name="birthDate" }} {{> afQuickField name="address" }} {{> afQuickField name="academicLevel"
+                                        }}
+                                    </div>
+                                    <div class="col s4">
+                                        {{> afQuickField name="contact"}} {{> afQuickField name="telphone"}} {{> afQuickField name="otherContact"}}
+                                    </div>
+                                    <div class="col s8">
+                                        {{> afQuickField name="desc"}}
+                                    </div>
+                                    <div class="col s8">
+                                        {{> afQuickField name="relationships"}}
+                                    </div>
+                                
+                                </div>
+                               
+                    <!-- </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                    </li>
+                </ul>     -->
+            </div>
+            
+            
+            
+            
+            
+            
+            
             <fieldset>
                 <legend>New Account</legend>
 
-                <div class="contaneir">
-
-                        {{> afQuickField name="picture"}}
-                        
-                        <div class="col s4 ">
-                                
-                                                    
-                            {{> afQuickField name="code" }}
-                            
-                            {{> afQuickField name="name" }}
-                            
-                            {{> afQuickField name="firstName" }}
-                            {{> afQuickField name="surname" }}
-                                                             
-                        </div>
-                        <div class="col s4">
-                            {{> afQuickField name="age" }}
-                            {{> afQuickField name="birthDate" }}
-                            {{> afQuickField name="address" }}
-                            {{> afQuickField name="academicLevel" }}   
-                        </div>
-                        <div class="col s4">
-                            {{> afQuickField name="contact"}}
-                            {{> afQuickField name="telphone"}}
-                            {{> afQuickField name="otherContact"}}
-                        </div>
-                        <div class="col s8">
-                            {{> afQuickField name="desc"}}
-                        </div>
-                        
-                </div>
-                
                 
             </fieldset>
         </div>
@@ -54,7 +70,6 @@
                 <button class="product-close btn waves-effect waves-light" type="reset" name="action"> Close
                     <i class="material-icons right">close</i>
                 </button>
-                    
         </div>
         
         {{/autoForm}}
