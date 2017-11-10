@@ -1,7 +1,8 @@
+import Images from '/lib/api/assets/methods.js';
+
 Template.Product.onCreated(function(){
     var self = this;
 
-    console.log(this);
 });
 
 Template.Product.events({
@@ -11,8 +12,18 @@ Template.Product.events({
 });
 
 Template.Product.helpers({
-    rendered: function() {
-        console.log(this);
+    image:function(){
+        
+        var idPicture = this.picture;
+
+        var picture = Images.findOne({
+            _id: idPicture
+        });
+        
+        console.log(picture);
+        
+        return picture;
     }
+
 });
 
