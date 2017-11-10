@@ -5,7 +5,6 @@ Template.NewProduct.onCreated(function(){
         self.subscribe('products');
         self.subscribe('familys');
         self.subscribe('files.images.all');
-        console.log('Ola Mundo');
     });
     
     
