@@ -1,30 +1,27 @@
 <template name="MainLayout">
 
-        {{> Header}}
-        {{> SideNav}}
-    <main>
-        
-        <div class="announcement">
-                                
-                <div class="container">Version 1.0 is coming soon! See this
-                        <a href="https://github.com/gmahota/AGNUS_CRM"> GitHub post</a> 
+        {{> Header}} {{> SideNav}}
+        <main>
+
+                <div class="announcement">
+
+                        <div class="container">Version 1.0 is coming soon! See this
+                                <a href="https://github.com/gmahota/AGNUS_CRM"> GitHub post</a>
                                 for more information.
-                              </div>
-                            </div>
-        
-        <div class="container">
-                {{> Template.dynamic template=main}}           
-        </div>
-    </main>
-    
+                        </div>
+                </div>
+                <div class="container">
+                        {{> Template.dynamic template=main}}
+                </div>
+        </main>
 
-    <footer>
-            {{> Template.dynamic template=footer}}
-            
-    </footer>
-    
-    <div class="row">{{> Breadcrumb}}    </div>
 
-    {{> Footer}}
+        <footer>
+                {{> Template.dynamic template=footer}}
+
+        </footer>
+
+        <div class="row">{{> Breadcrumb}} </div>
+
+        {{> Footer}}
 </template>
-

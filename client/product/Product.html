@@ -1,14 +1,14 @@
 <template name="Product">
 
     <div class="card">
-        {{picture.path}}
-        <img class="card-img-top" src="" alt="Card image cap">
+            {{pricture}}
+            <div class="card-block">
+                <h4 class="card-title">{{product}}</h4>
+                <p class="card-text">{{desc}}.</p>
+                <p class="card-text">{{price}}</p>
+                <a href="/product/{{_id}}">View Details</a>
                 
-        <div class="card-block">
-            <h4 class="card-title">{{product}}</h4>
-            <p class="card-text">{{desc}}.</p>
-            <a href="/product/{{_id}}">View Details</a>
-            
-        </div>
+            </div>
+        
     </div>
 </template>
