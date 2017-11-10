@@ -1,5 +1,67 @@
 <template name="NewAccount">
-    <div class="new-recipe-container">
-        {{> quickForm collection="Accounts" id="insertRecipeForm" type="insert" class= "new-recipe-form"}}
+    
+    <div class="">
+        
+        {{#autoForm collection="Accounts" type="insert" id="insertProductForm"}}
+        <div class="row">
+            <fieldset>
+                <legend>New Account</legend>
+
+                <div class="contaneir">
+
+                        {{> afQuickField name="picture"}}
+                        
+                        <div class="col s4 ">
+                                
+                                                    
+                            {{> afQuickField name="code" }}
+                            
+                            {{> afQuickField name="name" }}
+                            
+                            {{> afQuickField name="firstName" }}
+                            {{> afQuickField name="surname" }}
+                                                             
+                        </div>
+                        <div class="col s4">
+                            {{> afQuickField name="age" }}
+                            {{> afQuickField name="birthDate" }}
+                            {{> afQuickField name="address" }}
+                            {{> afQuickField name="academicLevel" }}   
+                        </div>
+                        <div class="col s4">
+                            {{> afQuickField name="contact"}}
+                            {{> afQuickField name="telphone"}}
+                            {{> afQuickField name="otherContact"}}
+                        </div>
+                        <div class="col s8">
+                            {{> afQuickField name="desc"}}
+                        </div>
+                        
+                </div>
+                
+                
+            </fieldset>
+        </div>
+        <div class="divider"></div>
+        <div class="rows">
+                <button type="reset" class="btn waves-effect waves-light">
+                    <i class="material-icons right">cancel</i>
+                    Reset 
+                </button>    
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                     <i class="material-icons right">send</i>
+                </button>
+                <button class="product-close btn waves-effect waves-light" type="reset" name="action"> Close
+                    <i class="material-icons right">close</i>
+                </button>
+                    
+        </div>
+        
+        {{/autoForm}}
+
+
+        
+        
+
     </div>
 </template>
