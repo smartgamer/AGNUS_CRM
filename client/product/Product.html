@@ -1,6 +1,6 @@
 <template name="Product">
 
-    <div class="card">
+    <!-- <div class="card">
             
             <img src="{{image.link}}"/>
             
@@ -12,5 +12,23 @@
                 
             </div>
         
+    </div> -->
+
+    <div class="col s3">
+          <div class="card">
+            <div class="card-image">
+              <img src="{{image.link}}">
+              
+            </div>
+            <div class="card-content">
+                <h4 class="card-title">{{product}}</h4>
+              <p>{{desc}}</p>
+              <p class="card-text">{{price}}</p>
+            </div>
+            <div class="card-action">
+              <a href="/product/{{_id}}">This is a link</a>
+            </div>
+          </div>
     </div>
+    
 </template>

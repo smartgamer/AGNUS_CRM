@@ -24,11 +24,16 @@
 
             <div class="row">
                 {{#if Template.subscriptionsReady}}
-                <div class="card-group">
+
                     {{#each products}}
                         {{> Product}}
                     {{/each}}
-                </div>
+
+                <!-- <div class="card-group">
+                    {{#each products}}
+                        {{> Product}}
+                    {{/each}}
+                </div> -->
                     
                 {{else}}
                     <p>Loading</p>
