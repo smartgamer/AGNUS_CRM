@@ -12,10 +12,6 @@ Meteor.publish('familys',function(){
     return Familys.find({});
 });
 
-Meteor.publish('accounts',function(){
-    return Accounts.find({});
-});
-
 Meteor.publish('records',function(){
     return Records.find({});
 });
@@ -27,12 +23,6 @@ Meteor.publish('appoiments',function(){
 ReactiveTable.publish("familysList",
     function () {
             return Familys;
-    }
-);
-
-ReactiveTable.publish("accountsList",
-    function () {
-            return Accounts;
     }
 );
 
