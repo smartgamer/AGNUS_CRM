@@ -2,7 +2,13 @@
     {{> Header}}
     {{> SideNav}}
     
-    {{> Dashboard}}
-    
+    {{#if currentUser}}  
+        {{> DashBoard_Account}} 
+    {{/if}}  
+
+    {{#if noUser}}  
+        {{> Dashboard}} 
+    {{/if}}  
+
     {{> Footer}}
 </template>
