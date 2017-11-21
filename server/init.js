@@ -5,8 +5,16 @@ import React from 'react';
 import { render } from 'react-dom';
 //import { renderRoutes } from '../imports/startup/client/routes.js';
 
+// this is an expensive polyfill for clientside Buffer usage
+// but we recommend you refactor to remove this dependency
+global.Buffer = global.Buffer || require("buffer").Buffer; // eslint-disable-line
+
 Meteor.startup(() => {
   
+  // this is an expensive polyfill for clientside Buffer usage
+  // but we recommend you refactor to remove this dependency
+  global.Buffer = global.Buffer || require("buffer").Buffer; // eslint-disable-line
+
   if(!Meteor.users.find().count()) {
     var options = {
       username: 'guimaraesmahota@gmail.com', 
