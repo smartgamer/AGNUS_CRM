@@ -21,7 +21,7 @@
     "handlebars": "^4.0.11",
     "history": "^4.7.2",
     "immutable": "^3.8.2",
-    "meteor-node-stubs": "~0.2.4",
+    "meteor-node-stubs": "^0.3.2",
     "moment": "^2.19.1",
     "mongodb": "2.2.30",
     "node-geocoder": "^3.21.0",
@@ -37,7 +37,8 @@
     "react-router": "^4.2.0",
     "simpl-schema": "^0.3.2",
     "tether": "^1.4.0",
-    "transliteration": "^1.6.2"
+    "transliteration": "^1.6.2",
+    "twilio": "^3.10.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.0",

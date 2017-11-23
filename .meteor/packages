@@ -62,6 +62,7 @@ aldeed:template-extension
 aldeed:scheduled-tasks
 aldeed:autoform-bs-datepicker
 #bozhao:accounts-instagram
+#abhiaiyer:meteor-twilio
 
 cfs:filesystem
 cfs:graphicsmagick

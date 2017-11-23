@@ -3,6 +3,7 @@ Template.NewAccount.onCreated(function(){
 
     self.autorun(function(){
         self.subscribe('accounts');
+        self.subscribe('banks');
     });
 });
 
