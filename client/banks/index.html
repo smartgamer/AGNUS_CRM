@@ -1,0 +1,19 @@
+<template name="Banks">
+    
+
+   {{#if $.Session.get 'NewBank'}} 
+       {{> NewBank}}
+   {{else}}
+       <button class="new-Bank waves-effect waves-light btn">
+           <i class="fa fa-plus left"></i> 
+           New 
+       </button>
+       <div class="divider"></div>
+   {{/if}}
+
+
+   <section class="ListBanks recipe">
+       {{> reactiveTable class="striped highlight ListBanks" settings=settings }}
+   </section>
+
+</template>

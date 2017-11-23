@@ -1,0 +1,36 @@
+<template name="NewBank">
+    <div class="rows">
+
+        {{#autoForm collection="Banks" type="insert" id="insertFamilyForm"}}
+
+        <div class="rows">
+            <div class="card">
+                <fieldset>
+                    <legend>New Bank</legend>
+
+                    <div class="col s6 ">
+                        {{> afQuickField name="code" }} {{> afQuickField name="desc" }}
+
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="rows">
+            <button type="reset" class="btn waves-effect waves-light">
+                <i class="material-icons right">cancel</i>
+                Reset
+            </button>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+            <button class="bank-close btn waves-effect waves-light" type="reset" name="action"> Close
+                <i class="material-icons right">close</i>
+            </button>
+
+        </div>
+
+        {{/autoForm}}
+    </div>
+
+</template>
