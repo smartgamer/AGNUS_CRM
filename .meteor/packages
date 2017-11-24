@@ -154,3 +154,5 @@ meteorhacks:async
 npm-container
 blaze-html-templates
 mizzao:autocomplete
+
+gwendall:simple-schema-i18n

@@ -1,0 +1,21 @@
+[
+    {
+        "language": "Portuguese",
+        "i18n": "pt",
+        "ns": "core",
+        "translation": {
+            "core": {
+                "languages": {
+                    "select": "Selecionar idioma"
+                },
+                "account": {
+                    "code": "Codigo",
+                    "name": "Nome",
+                    "firstName": "Primeiro Nome",
+                    "surname": "Apelido",
+                    "gender": "Sexo"
+                }
+            }
+        }
+    }
+]
