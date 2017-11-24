@@ -17,14 +17,14 @@
 
             </div>
 
-
-            <ul class="collapsible" data-collapsible="expandable">
+            <ul class="collapsible" data-collapsible="accordion">
                 <li>
                     <div class="collapsible-header active">
                         <i class="material-icons">info_outline</i>General Info</div>
                     <div class="collapsible-body">
-                        {{> afQuickField name="firstName" }} {{> afQuickField name="surname"}} {{> afQuickField name="age" }} {{> afQuickField name="birthDate"
-                        }} {{> afQuickField name="academicLevel"}}
+                        {{> afQuickField name="firstName" }} {{> afQuickField name="surname"}} 
+                        {{> afQuickField name="gender"}}
+                        {{> afQuickField name="age" }} {{> afQuickField name="birthDate"}} {{> afQuickField name="academicLevel"}}
 
                     </div>
                 </li>
@@ -49,6 +49,14 @@
                         <i class="material-icons">list</i>Other</div>
                     <div class="collapsible-body">
                         {{> afQuickField name="status"}} {{> afQuickField name="desc"}} {{> afQuickField name="type"}} {{> afQuickField name="relationships"}}
+                    </div>
+                </li>
+
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">card_membership</i>Membership</div>
+                    <div class="collapsible-body">
+                        {{> afQuickField name="membership"}} 
                     </div>
                 </li>
 
@@ -86,7 +94,7 @@
         <button class="btn waves-effect waves-light" type="submit" name="action">Submit
             <i class="material-icons right">send</i>
         </button>
-        <button type="submit" class="btn btn-danger">
+        <button class="btn btn-danger">
             <i class="fa fa-close"></i>
         </button>
     </div>

@@ -22,5 +22,11 @@ Template.AccountSingle.events({
     'click .list-Records':function(){
         var id = FlowRouter.getParam('id');
         FlowRouter.go('/Account_Records/' + id);
+    },
+    'click .delete':function(){
+        var id = FlowRouter.getParam('id');
+        Meteor.call('deleteAccount',id);
+
+        FlowRouter.go('/Accounts');
     }
 })
