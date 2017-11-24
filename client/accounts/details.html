@@ -1,6 +1,9 @@
 <template name="AccountSingle">
 
-  <button class="list-Records">Records</button>
+  <button class="list-Records"> <i class="material-icons left">cancel</i> Records</button>
+  <button class="list-Appoiment"> <i class="material-icons left">format_list_bulleted</i> Appoiments</button>
+  <button class="delete"> <i class="material-icons left">delete</i>  Delete</button>
+  <button class="edit"> <i class="material-icons left">edit</i> Edit</button>
 
   <div class="divider"></div>
 
@@ -58,20 +61,6 @@
 
       </ul>
     </div>
-    <div class="divider"></div>
-    <div class="rows">
-      <button type="reset" class="btn waves-effect waves-light">
-        <i class="material-icons right">cancel</i>
-        Reset
-      </button>
-      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-        <i class="material-icons right">send</i>
-      </button>
-      <button type="submit" class="btn btn-danger">
-        <i class="fa fa-close"></i>
-      </button>
-    </div>
-
     {{/autoForm}}
   </section>
 </template>
