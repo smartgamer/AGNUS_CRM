@@ -2,7 +2,8 @@
   "name": "agnus",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "deploy": "meteor-azure"
   },
   "dependencies": {
     "autoprefixer": "^7.1.5",
