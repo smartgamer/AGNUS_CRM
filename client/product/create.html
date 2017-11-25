@@ -1,0 +1,74 @@
+<template name="NewProduct">
+    <div class="">
+
+        {{#autoForm collection="Products" type="insert" id="insertProductForm"}}
+        <div class="row">
+            <fieldset>
+                <legend>New Product</legend>
+
+                <div class="contaneir">
+                    <div class="row">
+                        <div class="col s6">
+                            {{> afQuickField name="product" }} {{> afQuickField name="desc" }}
+                        </div>
+                        <div class="col s6">
+                            {{> afQuickField name="picture"}}
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header active">
+                            <i class="material-icons">info_outline</i>General Info</div>
+                        <div class="collapsible-body">
+                            {{> afQuickField name="summary" }} {{> afQuickField name="family" }} {{> afQuickField name="price" }}
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="collapsible-header ">
+                            <i class="material-icons">monetization_on</i>Price</div>
+                        <div class="collapsible-body">
+
+                            {{> afQuickField name="productPriceVariant.price1"}} {{> afQuickField name="productPriceVariant.price2"}} {{> afQuickField
+                            name="productPriceVariant.price3"}} {{> afQuickField name="productPriceVariant.price4"}} {{>
+                            afQuickField name="productPriceVariant.price5"}} {{> afQuickField name="productPriceVariant.price6"}}
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header ">
+                            <i class="material-icons">list</i>Other</div>
+                        <div class="collapsible-body">
+                            {{> afQuickField name="haveSerial" }} {{#if afFieldValueIs name="haveSerial" value=true }} {{> afQuickField name="serialNumbers"}}
+                            {{/if}}
+                        </div>
+                    </li>
+                </ul>
+
+
+
+            </fieldset>
+        </div>
+        <div class="divider"></div>
+        <div class="rows">
+            <button type="reset" class="btn waves-effect waves-light">
+                <i class="material-icons right">cancel</i>
+                Reset
+            </button>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+            <button class="product-close btn waves-effect waves-light" type="reset" name="action"> Close
+                <i class="material-icons right">close</i>
+            </button>
+
+        </div>
+
+        {{/autoForm}}
+    </div>
+
+</template>
