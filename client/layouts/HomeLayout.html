@@ -4,12 +4,11 @@
     
     {{#if currentUser}}  
         {{> DashBoard_Account}} 
-    {{/if}}  
-
-    {{#if noUser}}  
+    {{else}}
         {{> loginButtons}}
         {{> Dashboard}} 
     {{/if}}  
+
 
     {{> Footer}}
 </template>
