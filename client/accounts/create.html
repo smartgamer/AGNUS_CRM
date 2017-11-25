@@ -22,9 +22,8 @@
                     <div class="collapsible-header active">
                         <i class="material-icons">info_outline</i>General Info</div>
                     <div class="collapsible-body">
-                        {{> afQuickField name="firstName" }} {{> afQuickField name="surname"}} 
-                        {{> afQuickField name="gender"}}
-                        {{> afQuickField name="age" }} {{> afQuickField name="birthDate"}} {{> afQuickField name="academicLevel"}}
+                        {{> afQuickField name="firstName" }} {{> afQuickField name="surname"}} {{> afQuickField name="gender"}} {{> afQuickField
+                        name="age" }} {{> afQuickField name="birthDate"}} {{> afQuickField name="academicLevel"}}
 
                     </div>
                 </li>
@@ -32,8 +31,14 @@
                     <div class="collapsible-header">
                         <i class="material-icons">contacts</i>Contact's</div>
                     <div class="collapsible-body">
-                        {{> afQuickField name="address" }} {{> afQuickField name="contact"}} {{> afQuickField name="telphone"}} {{> afQuickField
-                        name="otherContact"}}
+                        <ul class="list-group">
+                            <li class="list-group-item autoform-array-item">
+                                <div class="autoform-array-item-body">
+                                    {{> afQuickField name="contact" }}
+                                </div>
+
+                            </li>
+                        </ul>
                     </div>
                 </li>
                 <li>
@@ -51,38 +56,31 @@
                         {{> afQuickField name="status"}} {{> afQuickField name="desc"}} {{> afQuickField name="type"}} {{> afQuickField name="relationships"}}
                     </div>
                 </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">account_balance</i>Professional Info</div>
+                    <div class="collapsible-body">
 
+                        <ul class="list-group">
+                            <li class="list-group-item autoform-array-item">
+                                <div class="autoform-array-item-body">
+                                    {{> afQuickField name="professionalInfo"}}
+                                </div>
+
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
                 <li>
                     <div class="collapsible-header">
                         <i class="material-icons">card_membership</i>Membership</div>
                     <div class="collapsible-body">
-                        {{> afQuickField name="membership"}} 
+                        {{> afQuickField name="membership"}}
                     </div>
                 </li>
 
             </ul>
-
-            <div class="col 12">
-
-                <!-- <ul class="collapsible" data-collapsible=''>
-                        <li>
-                            <div class="collapsible-header active"><i class="material-icons">Gender</i>General Info</div>
-                            <div class="collapsible-body"> -->
-
-
-
-
-                <!-- </li>
-                        <li>
-                            <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                        </li>
-                    </ul>     -->
-            </div>
         </fieldset>
     </div>
     <div class="divider"></div>
@@ -100,10 +98,5 @@
     </div>
 
     {{/autoForm}}
-
-
-
-
-
 
 </template>
