@@ -40,8 +40,8 @@ dynamic-import@0.1.3
 accounts-base
 accounts-ui
 accounts-password
-accounts-facebook
-accounts-google
+#accounts-facebook
+#accounts-google
 #accounts-twitter@1.3.0
 oauth-encryption@1.2.1
 facebook-config-ui@1.0.0
