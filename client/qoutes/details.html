@@ -1,0 +1,32 @@
+<template name="qouteSingle">
+
+    <button class="edit">
+        <i class="material-icons left">edit</i> Edit</button>
+    <button class="list-Invoices">
+        <i class="material-icons left">business</i> Invoices</button>
+    <button class="list-Appoiment">
+        <i class="material-icons left">format_list_bulleted</i> Appoiments</button>
+    <button class="delete">
+        <i class="material-icons left">delete</i> Delete</button>
+
+
+    <div class="divider"></div>
+
+    <section class="new-recipe-container">
+        {{#autoForm collection="Qoutas" doc=qoute type="readonly" id="insertProductForm"}}
+        <div class="row">
+
+            <h3>Details</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col s6 ">
+                        {{> afQuickField name="code" }} {{> afQuickField name="desc" }} {{> afQuickField name="year" }} {{> afQuickField name="begin"
+                        }} {{> afQuickField name="end" }} {{> afQuickField name="type"}} {{> afQuickField name="value"}}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {{/autoForm}}
+    </section>
+</template>
