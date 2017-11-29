@@ -1,0 +1,15 @@
+<template name="userList">
+    {{#if $.Session.get 'NewUser'}} 
+        {{> NewUser}} 
+    {{else}}
+        <button class="new-User waves-effect waves-light btn">
+            <i class="fa fa-plus left"></i>
+            New
+        </button>
+        
+    {{/if}}
+    <div class="divider"></div>
+    <section class="ListUsers recipe">
+        {{> reactiveTable class="striped highlight ListUsers" settings=settings }}
+    </section>
+</template>
