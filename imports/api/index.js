@@ -4,3 +4,4 @@ import './product/server/publications.js'
 import './qoutas/server/publications.js'
 
 import './accounts/server/methods.js'
+import './qoutas/server/methods.js'

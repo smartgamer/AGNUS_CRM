@@ -25,8 +25,8 @@ Template.qouteSingle.events({
     },
     'click .delete':function(){
         var id = FlowRouter.getParam('id');
-        Meteor.call('deleteAccount',id);
+        Meteor.call('deleteQoute',id);
 
-        FlowRouter.go('/Accounts');
+        FlowRouter.go('/Qoutas');
     }
 })
