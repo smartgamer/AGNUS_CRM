@@ -1,0 +1,55 @@
+<template name="NewInvoice">
+        <div class="rows">
+                
+                {{#autoForm collection="Invoices" type="insert" id="insertInvoiceForm"}}
+        
+                <div class="rows">
+                    <div class="card">
+                            <fieldset>
+                                    <legend>New Invoice</legend>
+                    
+                                    <div class="col s6 ">
+                                            {{> afQuickField name="qoute" }}
+                                            {{> afQuickField name="entity" }}
+                                            {{> afQuickField name="number"}}
+                                            {{> afQuickField name="serie" }}
+                                            {{> afQuickField name="document" }}
+                                            {{> afQuickField name="type" }}
+                                            {{> afQuickField name="date" }}
+
+                                            {{> afQuickField name="totalAmount" }}
+                                            
+                                            {{> afQuickField name="status" }}
+                                            
+                                    </div>
+                                </fieldset>
+                    </div>
+                    <div class= "card">
+                        {{> afQuickField name="item" }}
+                    </div>
+                    
+                </div>
+                <div class="divider"></div>
+                <div class="rows">
+                        <button type="reset" class="btn waves-effect waves-light">
+                            <i class="material-icons right">cancel</i>
+                            Reset 
+                        </button>    
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                             <i class="material-icons right">send</i>
+                        </button>
+                        <button class="invoice-close btn waves-effect waves-light" type="reset" name="action"> Close
+                            <i class="material-icons right">close</i>
+                        </button>
+                            
+                </div>
+                
+                {{/autoForm}}
+        
+        
+                
+                
+        
+            </div>
+
+</template>

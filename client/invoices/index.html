@@ -1,3 +1,16 @@
-<template name="qoutes">
-    
+<template name="invoicesList">
+    {{#if $.Session.get 'NewInvoice'}} 
+        {{> NewInvoice}}
+    {{else}}
+        <button class="new-Invoice waves-effect waves-light btn">
+            <i class="fa fa-plus left"></i> 
+            New 
+        </button>
+        <div class="divider"></div>
+    {{/if}}
+
+
+<section class="recipe">
+    {{> reactiveTable class="striped highlight ListInvoice" settings=settings }}
+</section>
 </template>

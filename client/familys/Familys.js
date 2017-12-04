@@ -32,12 +32,6 @@ Template.Familys.helpers({
 });
 
 Template.Familys.events({
-    'click .newFamily':function(){
-        FlowRouter.go('family_New');
-    }
-});
-
-Template.Familys.events({
     'click .ListFamilys tbody tr': function (event) {
         // set the blog post we'll display details and news for
         var post = this;
