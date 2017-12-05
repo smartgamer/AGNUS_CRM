@@ -29,7 +29,8 @@
   }
   
   .nav-wrapper{
-   background: #524763;
+    background:#d50000 ;
+   /* background: #524763; */
   }
   
   header a:focus, a:hover {
@@ -38,5 +39,7 @@
   }
   
   nav.nav-extended {
-   background: #524763;
+    background: #d50000;
+   /* background: #524763; */
+
   }
