@@ -1,0 +1,44 @@
+<template name="NewCompany">
+    <div class="rows">
+
+        {{#autoForm collection="Companies" type="insert" id="insertInvoiceForm"}}
+
+        <div class="row">
+            <div class="card">
+                <fieldset>
+                    <legend>New Company</legend>
+
+                    <div class="col s6 ">
+                        {{> afQuickField name="code" }} 
+                        {{> afQuickField name="name" }}
+                        {{> afQuickField name="desc" }}
+                        {{> afQuickField name="open" }}
+                        {{> afQuickField name="contact" }}
+                        {{> afQuickField name="picture" }}
+                        {{> afQuickField name="status" }}
+                        {{> afQuickField name="haveBankAccount" }}
+                        {{> afQuickField name="bankAccount" }}
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="divider"></div>
+            <div class="rows">
+                    <button type="reset" class="btn waves-effect waves-light">
+                        <i class="material-icons right">cancel</i>
+                        Reset 
+                    </button>    
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                         <i class="material-icons right">send</i>
+                    </button>
+                    <button class="company-close btn waves-effect waves-light" type="reset" name="action"> Close
+                        <i class="material-icons right">close</i>
+                    </button>
+                        
+            </div>
+        </div>
+
+        {{/autoForm}}
+        
+    </div>
+</template>

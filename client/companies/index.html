@@ -1,0 +1,17 @@
+<template name="companiesList">
+    
+    {{#if $.Session.get 'NewCompany'}} 
+        {{> NewCompany}}
+    {{else}}
+        <button class="new-Company waves-effect waves-light btn">
+            <i class="fa fa-plus left"></i> 
+            New 
+        </button>
+        <div class="divider"></div>
+    {{/if}}
+
+
+    <section class="ListCompanies recipe">
+        {{> reactiveTable class="striped highlight ListCompanies" settings=settings }}
+    </section>
+</template>

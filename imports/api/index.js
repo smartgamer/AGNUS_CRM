@@ -7,3 +7,5 @@ import './invoices/server/publications.js'
 import './accounts/server/methods.js'
 import './qoutas/server/methods.js'
 import './invoices/server/methods.js'
+
+import './entities/index.js'
