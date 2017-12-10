@@ -1,52 +1,155 @@
 <template name="Header">
-        
+
+    <header>
+        <nav class="nav-extended">
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">Gestão de Membros</a>
+                <a href="/" data-activates="mobile-demo" class="button-collapse">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="/">
+                            <i class="material-icons right">home</i>
+                            <span class="hidden-sm-down">Pagina Inicial</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/accounts">
+                            <i class="material-icons right">account_circle</i>
+                            <span class="hidden-sm-down">Membros</span>
+                        </a>
+                    </li>
+                    <li>{{> loginButtons}}</li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li>
+                        <a href="/">
+                            <i class="material-icons right">home</i>
+                            <span class="hidden-sm-down">Pagina Inicial</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/accounts">
+                            <i class="material-icons right">account_circle</i>
+                            <span class="hidden-sm-down">Membros</span>
+                        </a>
+                    </li>
+                    <li>{{> loginButtons}}</li>
+
+                </ul>
+            </div>
+
+
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab">
+                        <a href="/settings">Definições</a>
+                    </li>
+                    <li class="tab">
+                        <a class="active" href="#test2">Relatórios</a>
+                    </li>
+                    <li class="tab">
+                        <a href="/qoutas">Cotas</a>
+                    </li>
+                    <li class="tab">
+                        <a href="/invoices">Pagamentos</a>
+                    </li>
+                    <li class="tab">
+                        <a href="#test4">Suporte</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+
+
+</template>
+
+<template name="Header_OLD">
+
     <header>
         <nav class="nav-extended">
             <div class="nav-wrapper">
                 <a href="/" class="brand-logo">AGNUS CRM</a>
                 <a href="/" data-activates="mobile-demo" class="button-collapse">
-                    <i class="material-icons">menu</i></a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li>
-                            <a href="/">
-                                    <i class="material-icons right">home</i> 
-                                    <span class="hidden-sm-down">Home</span> 
-                                </a>    
-                        </li>
-                        
-                        <li><a href="/accounts"><i class="material-icons right">account_circle</i> <span class="hidden-sm-down">Accounts</span></a></li>
-                        <li><a href="/customers"><i class="material-icons right">group</i> <span class="hidden-sm-down">Customers</span></a></li>
-                        <li >{{> loginButtons}}</li>
-                    </ul>
-                    <ul class="side-nav" id="mobile-demo">
-                        <li>
-                            <a href="/">
-                                <i class="material-icons right">home</i> 
-                                <span class="hidden-sm-down">Home</span> 
-                            </a>
-                        </li>
-                        <li><a href="/accounts"><i class="material-icons right">account_circle</i> <span class="hidden-sm-down">Accounts</span></a></li>
-                        <li><a href="/customers"><i class="material-icons right">group</i> <span class="hidden-sm-down">Customers</span></a></li>
-                        <li >{{> loginButtons}}</li>
-                        
-                    </ul>
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="/">
+                            <i class="material-icons right">home</i>
+                            <span class="hidden-sm-down">Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/accounts">
+                            <i class="material-icons right">account_circle</i>
+                            <span class="hidden-sm-down">Accounts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/customers">
+                            <i class="material-icons right">group</i>
+                            <span class="hidden-sm-down">Customers</span>
+                        </a>
+                    </li>
+                    <li>{{> loginButtons}}</li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li>
+                        <a href="/">
+                            <i class="material-icons right">home</i>
+                            <span class="hidden-sm-down">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/accounts">
+                            <i class="material-icons right">account_circle</i>
+                            <span class="hidden-sm-down">Accounts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/customers">
+                            <i class="material-icons right">group</i>
+                            <span class="hidden-sm-down">Customers</span>
+                        </a>
+                    </li>
+                    <li>{{> loginButtons}}</li>
+
+                </ul>
             </div>
 
 
-                <div class="nav-content">
-                      <ul class="tabs tabs-transparent">
-                        <li class="tab"><a href="/settings">Settings</a></li>
-                        <li class="tab"><a class="active" href="#test2">Reports</a></li>
-                        <li class="tab"><a href="/qoutas">Qoutas</a></li>
-                        <li class="tab"><a href="/invoices">invoices</a></li>
-                        <li class="tab"><a href="#test4">Suport US</a></li>
-                        
-                    </ul>
-                      
-                </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab">
+                        <a href="/settings">Settings</a>
+                    </li>
+                    <li class="tab">
+                        <a class="active" href="#test2">Reports</a>
+                    </li>
+                    <li class="tab">
+                        <a href="/qoutas">Qoutas</a>
+                    </li>
+                    <li class="tab">
+                        <a href="/invoices">invoices</a>
+                    </li>
+                    <li class="tab">
+                        <a href="#test4">Suport US</a>
+                    </li>
+
+                </ul>
+
+            </div>
         </nav>
     </header>
-    
-    
-    
+
+
+
 </template>

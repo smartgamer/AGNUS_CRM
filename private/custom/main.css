@@ -40,3 +40,9 @@ header a:focus, a:hover {
 nav.nav-extended {
  background: #524763;
 }
+
+page-footer {
+  padding-top: 20px;
+  color: none;
+  background-color: #ee6e73;
+}

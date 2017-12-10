@@ -43,3 +43,14 @@
    /* background: #524763; */
 
   }
+
+.page-footer {
+    padding-top: 20px;
+    color: black;
+    background-color: #ee6e73;
+    
+}
+
+#chart-dashboard {
+  padding-top: 12px;
+}

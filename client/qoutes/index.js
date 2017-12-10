@@ -19,19 +19,19 @@ Template.qoutasList.helpers({
             showNavigation: 'auto',
             fields: [
                 { key: '_id', label: 'Id', hidden: true },
-                { key: 'code', label: 'Code' },
-                { key: 'desc', label: 'Description' },
+                { key: 'code', label: 'Codigo' },
+                { key: 'desc', label: 'Descrição' },
                 { key: 'year', label: 'Year' },
                 {
-                    key: 'begin', label: 'Begin'
+                    key: 'begin', label: 'Inicio'
                     , fn: function (value, object, key) { return moment(value).format('DD-MM-YYYY'); }
                 },
                 {
-                    key: 'end', label: 'End', fn: function (value, object, key) { return moment(value).format('DD-MM-YYYY'); }
+                    key: 'end', label: 'Fim', fn: function (value, object, key) { return moment(value).format('DD-MM-YYYY'); }
                 },
-                { key: 'frequency', label: 'Frequency', hidden: true },
-                { key: 'type', label: 'Type' },
-                { key: 'value', label: 'Value' },
+                { key: 'frequency', label: 'Frequência', hidden: true },
+                { key: 'type', label: 'Tipo' },
+                { key: 'value', label: 'Valor' },
             ],
             useFontAwesome: true,
             rowClass: '',

@@ -8,14 +8,44 @@
                 <fieldset>
                     <legend>New Company</legend>
 
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s6">
+                                {{> afQuickField name="code" }} 
+                                {{> afQuickField name="name" }}
+                            </div>
+                            <div class="col s4">
+                                {{> afQuickField name="picture"}}
+                            </div>
+        
+                        </div>
+        
+                    </div>
+
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header active">
+                                <i class="material-icons">info_outline</i>General Info</div>
+                            <div class="collapsible-body">
+                                {{> afQuickField name="desc" }}
+                                {{> afQuickField name="open" }}
+                                
+                                {{> afQuickField name="status" }}
+        
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">
+                                <i class="material-icons">contacts</i>Contact's</div>
+                            <div class="collapsible-body">
+                                {{> afQuickField name="contact" }}
+                            </div>
+                        </li>
+                    </ul>
+
                     <div class="col s6 ">
-                        {{> afQuickField name="code" }} 
-                        {{> afQuickField name="name" }}
-                        {{> afQuickField name="desc" }}
-                        {{> afQuickField name="open" }}
-                        {{> afQuickField name="contact" }}
-                        {{> afQuickField name="picture" }}
-                        {{> afQuickField name="status" }}
+                        
+                        
                         {{> afQuickField name="haveBankAccount" }}
                         {{> afQuickField name="bankAccount" }}
                     </div>

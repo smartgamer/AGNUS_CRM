@@ -26,23 +26,23 @@ Template.invoicesList.helpers({
                     key: 'date', label: 'Data'
                     , fn: function (value, object, key) { return moment(value).format('DD-MM-YYYY'); }
                 },
-                { key: 'qoute', label: 'qoute',
+                { key: 'qoute', label: 'Cota',
                     fn: function (value, object, key) { return Qoutas.findOne({ _id: value}).desc; }
                 },
-                { key: 'entity', label: 'Entity' ,
+                { key: 'entity', label: 'Codigo' ,
                     fn: function (value, object, key) { return Accounts.findOne({ _id: value}).code; }
                 },
-                { key: 'entity', label: 'Name' ,
+                { key: 'entity', label: 'Nome' ,
                     fn: function (value, object, key) { return Accounts.findOne({ _id: value}).name; }
                 },
-                { key: 'document', label: 'Document' },
-                { key: 'number', label: 'Number' },
-                { key: 'serie', label: 'Serie' },
+                { key: 'document', label: 'Documento' },
+                { key: 'number', label: 'Nr.' },
+                { key: 'serie', label: 'Seria' },
                 
-                { key: 'type', label: 'Type' },
+                { key: 'type', label: 'Tipo' },
                 
                 { key: 'totalAmount', label: 'Total Amount'},
-                { key: 'status', label: 'status' }
+                { key: 'status', label: 'Estatuto' }
             ],
             useFontAwesome: true,
             rowClass: '',

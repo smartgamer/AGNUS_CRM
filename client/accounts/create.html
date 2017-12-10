@@ -20,7 +20,7 @@
             <ul class="collapsible" data-collapsible="accordion">
                 <li>
                     <div class="collapsible-header active">
-                        <i class="material-icons">info_outline</i>General Info</div>
+                        <i class="material-icons">info_outline</i>Dados Gerais</div>
                     <div class="collapsible-body">
                         {{> afQuickField name="firstName" }} {{> afQuickField name="surname"}} {{> afQuickField name="gender"}} {{> afQuickField
                         name="age" }} {{> afQuickField name="birthDate"}} {{> afQuickField name="academicLevel"}}
@@ -29,7 +29,7 @@
                 </li>
                 <li>
                     <div class="collapsible-header">
-                        <i class="material-icons">contacts</i>Contact's</div>
+                        <i class="material-icons">contacts</i>Contactos</div>
                     <div class="collapsible-body">
                         <ul class="list-group">
                             <li class="list-group-item autoform-array-item">
@@ -43,7 +43,7 @@
                 </li>
                 <li>
                     <div class="collapsible-header">
-                        <i class="material-icons">attach_money</i>Bank Account's</div>
+                        <i class="material-icons">attach_money</i>Dados Bancarios</div>
                     <div class="collapsible-body">
                         {{> afQuickField name="haveBankAccount"}} {{> afQuickField name="bankAccount" value="true" }}
 
@@ -51,18 +51,18 @@
                 </li>
                 <li>
                     <div class="collapsible-header">
-                        <i class="material-icons">list</i>Other</div>
+                        <i class="material-icons">list</i>Outros Dados</div>
                     <div class="collapsible-body">
                         
                         {{> afQuickField name="desc"}} 
-                        {{> afQuickField name="type"}} 
+                        <!-- {{> afQuickField name="type"}}  -->
                         {{> afQuickField name="status"}} 
                         <!-- {{> afQuickField name="relationships"}} -->
                     </div>
                 </li>
                 <li>
                     <div class="collapsible-header">
-                        <i class="material-icons">account_balance</i>Professional Info</div>
+                        <i class="material-icons">account_balance</i>Dados Profissionais</div>
                     <div class="collapsible-body">
 
                         <ul class="list-group">
@@ -78,7 +78,7 @@
                 </li>
                 <li>
                     <div class="collapsible-header">
-                        <i class="material-icons">card_membership</i>Membership</div>
+                        <i class="material-icons">card_membership</i>Dados do Membro</div>
                     <div class="collapsible-body">
                         {{> afQuickField name="membership"}}
                     </div>
@@ -91,12 +91,12 @@
     <div class="rows">
         <button type="reset" class="btn waves-effect waves-light">
             <i class="material-icons right">cancel</i>
-            Reset
+            Cancelar
         </button>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+        <button class="btn waves-effect waves-light" type="submit" name="action">Gravar
             <i class="material-icons right">send</i>
         </button>
-        <button class="btn btn-danger">
+        <button class="btn btn-danger"> Feixar
             <i class="fa fa-close"></i>
         </button>
     </div>

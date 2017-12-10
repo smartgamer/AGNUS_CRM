@@ -19,12 +19,9 @@ Template.Accounts.helpers({
             showNavigation: 'auto',
             fields: [
                 { key: '_id', label: 'Id',hidden: true },
-                { key: 'code', label: 'Code' },
-                { key: 'name', label: 'Name' },
-                { key: 'telphone', label: 'Telphone' },
-                { key: 'email', label: 'Email' }
-                
-                
+                { key: 'code', label: 'Código' },
+                { key: 'name', label: 'Nome' },
+                { key: 'gender', label:'Sexo'},
             ],
             useFontAwesome: true,
             rowClass:'',

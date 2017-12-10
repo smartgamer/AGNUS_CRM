@@ -4,6 +4,18 @@ Template.Banks.onCreated(function(){
     self.autorun(function(){
         self.subscribe('banks');
     });
+
+    var s = "000" + 123;
+    console.log( s.substr(s.length-4));
+    console.log(Meteor.call('pad',123,4));
+
+    // const str = "10";
+    // let a =str.padStart(5, '0');
+                
+    // console.log(a);
+
+    // Client: Asynchronously send an email.
+    //Meteor.call('colocaZeros','10','123');
 });
 
 Template.Banks.helpers({
