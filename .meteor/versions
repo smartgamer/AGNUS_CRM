@@ -112,10 +112,12 @@ maazalik:highcharts@0.4.0
 maazalik:highcharts-gauge@0.4.0
 matb33:collection-hooks@0.8.4
 materialize:materialize@0.100.2
+mdg:meteor-apm-agent@3.1.1
 mdg:validated-method@1.1.0
 meteor@1.7.2
 meteor-base@1.1.0
 meteorhacks:async@1.0.0
+meteorhacks:meteorx@1.4.1
 meteorhacks:npm@1.5.0
 meteorhacks:picker@1.0.3
 meteorhacks:ssr@2.2.0

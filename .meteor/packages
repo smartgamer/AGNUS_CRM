@@ -159,3 +159,4 @@ gwendall:simple-schema-i18n
 maazalik:highcharts
 maazalik:highcharts-gauge
 #meteor-azure
+mdg:meteor-apm-agent
