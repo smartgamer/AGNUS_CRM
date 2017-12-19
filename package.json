@@ -28,6 +28,7 @@
     "node-geocoder": "^3.21.0",
     "node-loggly-bulk": "^2.0.2",
     "nodemailer-wellknown": "^0.2.3",
+    "package": "^1.0.1",
     "popper.js": "^1.12.5",
     "postcss": "^6.0.13",
     "postcss-js": "^1.0.1",
@@ -39,7 +40,7 @@
     "simpl-schema": "^0.3.2",
     "tether": "^1.4.0",
     "transliteration": "^1.6.2",
-    "twilio": "^3.10.0"
+    "twilio": "^3.11.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.0",

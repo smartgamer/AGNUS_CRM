@@ -64,13 +64,13 @@ aldeed:autoform-bs-datepicker
 #bozhao:accounts-instagram
 #abhiaiyer:meteor-twilio
 
-cfs:filesystem
-cfs:graphicsmagick
-cfs:gridfs
-cfs:standard-packages
-cfs:storage-adapter
-cfs:ui
-cfs:dropbox
+#cfs:filesystem
+#cfs:graphicsmagick
+#cfs:gridfs
+#cfs:standard-packages
+#cfs:storage-adapter
+#cfs:ui
+#cfs:dropbox
 
 ostrio:autoform-files
 ostrio:files
@@ -160,3 +160,5 @@ maazalik:highcharts
 maazalik:highcharts-gauge
 #meteor-azure
 mdg:meteor-apm-agent
+
+jparker:crypto-md5

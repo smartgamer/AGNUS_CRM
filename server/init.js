@@ -11,6 +11,8 @@ global.Buffer = global.Buffer || require("buffer").Buffer; // eslint-disable-lin
 
 Meteor.startup(() => {
   
+  console.log(Meteor.settings);
+
   // this is an expensive polyfill for clientside Buffer usage
   // but we recommend you refactor to remove this dependency
   global.Buffer = global.Buffer || require("buffer").Buffer; // eslint-disable-line
@@ -24,16 +26,21 @@ Meteor.startup(() => {
     Accounts.createUser(options);
   }
 
+  Meteor.call('geraReferencia','BIM','0001', '0002', '1577');
+
+  
+
   // code to run on server at startup
-  smtp = {
-    username: 'guimaraesmahota@gmail.com',   // eg: server@gentlenode.com
-    password: 'Agnes27012015!',   // eg: 3eeP1gtizk5eziohfervU
-    server:   'smtp.gmail.com',  // eg: mail.gandi.net
-    port: 25
-  }
+  // smtp = {
+  //   username: 'guimaraesmahota@gmail.com',   // eg: server@gentlenode.com
+  //   password: 'Agnes27012015!',   // eg: 3eeP1gtizk5eziohfervU
+  //   server:   'smtp.gmail.com',  // eg: mail.gandi.net
+  //   port: 25
+  // }
 
-  process.env.MAIL_URL = 'smtp://' + encodeURIComponent(smtp.username) + ':' + encodeURIComponent(smtp.password) + '@' + encodeURIComponent(smtp.server) + ':' + smtp.port;
-
+  //process.env.MAIL_URL = 'smtp://' + encodeURIComponent(smtp.username) + ':' + encodeURIComponent(smtp.password) + '@' + encodeURIComponent(smtp.server) + ':' + smtp.port;
+  //process.env.MAIL_URL  = "smtp://gmahota:Agnes270115!@smtp.sendgrid.net:587"
+  
   // Add Facebook configuration entry
   ServiceConfiguration.configurations.update(
     { "service": "facebook" },

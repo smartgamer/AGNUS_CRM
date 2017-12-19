@@ -7,7 +7,7 @@ Template.Banks.onCreated(function(){
 
     var s = "000" + 123;
     console.log( s.substr(s.length-4));
-    console.log(Meteor.call('pad',123,4));
+    Meteor.call('pad',123,9);
 
     // const str = "10";
     // let a =str.padStart(5, '0');
