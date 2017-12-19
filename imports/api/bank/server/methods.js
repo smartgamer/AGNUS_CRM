@@ -1,6 +1,8 @@
 import { Meteor } from "meteor/meteor";
 import { check } from 'meteor/check';
 
+
+
 Meteor.methods({
     colocaZeros: function (tamanho, valor) {
 
@@ -10,127 +12,98 @@ Meteor.methods({
     },
     pad: function (num, size) {
 
-        
         check(num, Match.Any);
         check(size, Match.Any);
 
-        var s = num + "";
-        while (s.length < size) s = "0" + num;
+        var s = num.toString() + "";
+        console.log(num);
+        while (s.length < size) {
+            s = "0" + s;
+        }
 
         return s;
     },
-    geraReferencia: function (codigoBanco,banco, codigoEmpresa, factura) {
+    geraReferencia: function (codigoBanco, banco, codigoEmpresa, factura) {
+        var strNibFinal ="";
 
-        //         '----------------------------------------------------------------
-        //         'Validacao dos Codigo de Banco
-        //         '----------------------------------------------------------------
-        //         If Len(Banco) <> 4 Then
-        //            MsgBox ("Codigo Banco deve ter 4 digitos")
-                 
-        //             Exit Function
-        //         End If
-        //         '----------------------------------------------------------------
-        //         'Validacao do Codigo da empresa
-        //         '----------------------------------------------------------------
-        //         If Len(CodigoEmpresa) <> 4 Then
-        //             MsgBox ("Codigo Balcão deve ter 4 digitos")
-                      
-        //             Exit Function
-        //         End If
-
-
-        //check([banco, codigoEmpresa, factura],[]);
-        
-        switch(codigoBanco){
+        switch (codigoBanco) {
             case "BIM":
-                
-                if(banco.length != 4){
+
+                if (banco.length != 4) {
                     console.log("Codigo Banco deve ter 4 digitos");
                     return;
                 }
 
-                if(codigoEmpresa.length != 4){
+                if (codigoEmpresa.length != 4) {
                     console.log("Codigo Balcão deve ter 4 digitos");
                     return;
                 }
 
-                var arrayPeso= [73,17,89,38,62,45,53,15,50,5,49,34,81,76,27,90,9,30,3,10,1];
+                var arrayPeso = [73, 17, 89, 38, 62, 45, 53, 15, 50, 5, 49, 34, 81, 76, 27, 90, 9, 30, 3, 10, 1];
 
-                
-                var strAuxConta = Meteor.call('pad',factura,11);
+                var strAuxConta = Meteor.call('pad', factura, 11);
 
                 var strNib = banco.toString() + codigoEmpresa.toString() + strAuxConta.toString() + "00"
 
-                
                 var lngSoma = 0;
                 var soma1 = 0;
-                //var i = 0;
 
-                for (var i = 0; i<21;i++){
-                    var num= strNib.charAt(i);
-                    soma1 = num * arrayPeso[i]; 
+                for (var i = 0; i < 21; i++) {
+                    var num = strNib.charAt(i);
+                    soma1 = num * arrayPeso[i];
                     lngSoma = lngSoma + soma1;
                 }
-                console.log(lngSoma);
+
                 var lngModSoma = lngSoma % 97;
 
                 var intChDj = 98 - lngModSoma;
 
-                
-                var strNibFinal = strNib.substring(0,19).toString() ;
-                
-                
-                strNibFinal += Meteor.call('pad',intChDj,2);
 
-                console.log(strNibFinal);
-                return;
-                //----------------------------------------------------------------
-                //         ' Calculo dos Pesos e a Soma St'
-                //         Dim soma1 As Long
-                //         '----------------------------------------------------------------
-                //         For I = 1 To 21
-                //             soma1 = (Val(Mid(strNib, I, 1)) * ArrayPeso(I - 1))
-                //             lngSoma = lngSoma + soma1
-                //         Next
+                strNibFinal = strNib.substring(0, 19).toString();
+
+
+                strNibFinal += Meteor.call('pad', intChDj, 2);
 
                 break;
         }
 
-        var referencia="";
-        var sReferenciaSCheck = "";
+        return strNibFinal;
 
-        var sReferenciaSCheckCalc = "";
+        // var referencia = "";
+        // var sReferenciaSCheck = "";
 
-        var I = 1;
-        var P = 0;
-        var S = 0;
-        var numPos = 0;
-        var CheckDigitReferencia = 0;
+        // var sReferenciaSCheckCalc = "";
 
-        sReferenciaSCheck = this.pad(4,refCashDirecto) + this.pad(11, codigo.toString());
+        // var I = 1;
+        // var P = 0;
+        // var S = 0;
+        // var numPos = 0;
+        // var CheckDigitReferencia = 0;
 
-        sReferenciaSCheckCalc = this.pad(4, codBanco) + sReferenciaSCheck ;
+        // sReferenciaSCheck = this.pad(4, refCashDirecto) + this.pad(11, codigo.toString());
 
-        while (I <= 15) {
-            if (I === 1) {
-                P = 0;
-            }
-            if (I < 15) {
-                numPos = sReferenciaSCheckCalc.substr(((I - 1) | 0), 1);
-            } else {
-                numPos = 0;
-            }
+        // sReferenciaSCheckCalc = this.pad(4, codBanco) + sReferenciaSCheck;
 
-            S = (P + numPos) | 0;
-            P = (Bridge.Int.mul(S, 10)) % 97;
+        // while (I <= 15) {
+        //     if (I === 1) {
+        //         P = 0;
+        //     }
+        //     if (I < 15) {
+        //         numPos = sReferenciaSCheckCalc.substr(((I - 1) | 0), 1);
+        //     } else {
+        //         numPos = 0;
+        //     }
 
-            I = (I + 1) | 0;
-        }
+        //     S = (P + numPos) | 0;
+        //     P = (Bridge.Int.mul(S, 10)) % 97;
 
-        CheckDigitReferencia = (98 - P) | 0;
+        //     I = (I + 1) | 0;
+        // }
 
-        referencia = sReferenciaSCheck + this.pad(2, CheckDigitReferencia.toString());
-        return referencia;
+        // CheckDigitReferencia = (98 - P) | 0;
+
+        // referencia = sReferenciaSCheck + this.pad(2, CheckDigitReferencia.toString());
+        // return referencia;
     }
 });
 
@@ -167,13 +140,13 @@ Meteor.methods({
 //         ArrayPeso(19) = 10
 //         ArrayPeso(20) = 1
 
-            
+
 //         '----------------------------------------------------------------
 //         'Validacao dos Codigo de Banco
 //         '----------------------------------------------------------------
 //         If Len(Banco) <> 4 Then
 //            MsgBox ("Codigo Banco deve ter 4 digitos")
-         
+
 //             Exit Function
 //         End If
 //         '----------------------------------------------------------------
@@ -181,7 +154,7 @@ Meteor.methods({
 //         '----------------------------------------------------------------
 //         If Len(CodigoEmpresa) <> 4 Then
 //             MsgBox ("Codigo Balcão deve ter 4 digitos")
-              
+
 //             Exit Function
 //         End If
 //         '----------------------------------------------------------------
@@ -195,7 +168,7 @@ Meteor.methods({
 //         ' Composicao do NIB pelos dados de Input e
 //         ' acrescentar dois zeros como check digito "00"
 //         '-----------------------------------------------------------------
-        
+
 //         strNib = Banco & CodigoEmpresa & StrAuxConta & "00"
 
 //         'J = Len(strNib)

@@ -4,18 +4,6 @@ Template.Banks.onCreated(function(){
     self.autorun(function(){
         self.subscribe('banks');
     });
-
-    var s = "000" + 123;
-    console.log( s.substr(s.length-4));
-    Meteor.call('pad',123,9);
-
-    // const str = "10";
-    // let a =str.padStart(5, '0');
-                
-    // console.log(a);
-
-    // Client: Asynchronously send an email.
-    //Meteor.call('colocaZeros','10','123');
 });
 
 Template.Banks.helpers({
@@ -33,8 +21,6 @@ Template.Banks.helpers({
                 { key: '_id', label: 'Id',hidden: true },
                 { key: 'code', label: 'Code' },
                 { key: 'desc', label: 'Descrição' }
-                
-                
             ],
             useFontAwesome: true,
             rowClass:'',

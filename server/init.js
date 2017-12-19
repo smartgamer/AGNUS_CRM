@@ -3,6 +3,7 @@ import { SSR, Template } from 'meteor/meteorhacks:ssr';
 import { Accounts } from 'meteor/accounts-base';
 import React from 'react';
 import { render } from 'react-dom';
+import { Meteor } from 'meteor/meteor';
 //import { renderRoutes } from '../imports/startup/client/routes.js';
 
 // this is an expensive polyfill for clientside Buffer usage
@@ -15,31 +16,18 @@ Meteor.startup(() => {
 
   // this is an expensive polyfill for clientside Buffer usage
   // but we recommend you refactor to remove this dependency
-  global.Buffer = global.Buffer || require("buffer").Buffer; // eslint-disable-line
+  //global.Buffer = global.Buffer || require("buffer").Buffer; // eslint-disable-line
 
   if(!Meteor.users.find().count()) {
     var options = {
-      username: 'guimaraesmahota@gmail.com', 
-      password: 'Agnes270115!', 
-      email: 'guimaraesmahota@gmail.com'
+      username: Meteor.settings.private.Agnus.username, 
+      password: Meteor.settings.private.Agnus.password, 
+      email: Meteor.settings.private.Agnus.email
     };
     Accounts.createUser(options);
   }
 
-  Meteor.call('geraReferencia','BIM','0001', '0002', '1577');
-
-  
-
-  // code to run on server at startup
-  // smtp = {
-  //   username: 'guimaraesmahota@gmail.com',   // eg: server@gentlenode.com
-  //   password: 'Agnes27012015!',   // eg: 3eeP1gtizk5eziohfervU
-  //   server:   'smtp.gmail.com',  // eg: mail.gandi.net
-  //   port: 25
-  // }
-
-  //process.env.MAIL_URL = 'smtp://' + encodeURIComponent(smtp.username) + ':' + encodeURIComponent(smtp.password) + '@' + encodeURIComponent(smtp.server) + ':' + smtp.port;
-  //process.env.MAIL_URL  = "smtp://gmahota:Agnes270115!@smtp.sendgrid.net:587"
+  //Meteor.call('geraReferencia','BIM','0001', '0002', '1577');
   
   // Add Facebook configuration entry
   ServiceConfiguration.configurations.update(
