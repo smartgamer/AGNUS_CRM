@@ -90,6 +90,7 @@ logging@1.1.17
 lookback:tooltips@0.6.1
 maazalik:highcharts@0.4.0
 maazalik:highcharts-gauge@0.4.0
+manuel:reactivearray@1.0.6
 matb33:collection-hooks@0.8.4
 materialize:materialize@0.100.2
 mdg:meteor-apm-agent@3.1.1
@@ -115,6 +116,8 @@ mongo@1.2.2
 mongo-dev-server@1.0.1
 mongo-id@1.0.6
 mongo-livedata@1.0.12
+mozfet:autoform-materialize@3.5.0
+mozfet:materialize-icons@0.0.3
 mrt:flash-messages@1.0.1
 mrt:later@1.6.1
 natestrauser:select2@4.0.3

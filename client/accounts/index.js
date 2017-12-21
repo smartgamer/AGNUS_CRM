@@ -46,13 +46,6 @@ Template.Accounts.events({
     },
     'click .new-Account': function () {
         Session.set('NewAccount', true);
-
-        var sms = {
-            to: "+258 849535156",
-            body: "Ola from CPFM - Camarada"
-        };
-    
-        Meteor.call('sendSMS', sms);
     }
 });
 

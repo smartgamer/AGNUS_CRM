@@ -4,6 +4,8 @@ import { Accounts } from 'meteor/accounts-base';
 import React from 'react';
 import { render } from 'react-dom';
 import { Meteor } from 'meteor/meteor';
+//import { console } from 'meteor/tools';
+
 //import { renderRoutes } from '../imports/startup/client/routes.js';
 
 // this is an expensive polyfill for clientside Buffer usage
@@ -12,6 +14,8 @@ global.Buffer = global.Buffer || require("buffer").Buffer; // eslint-disable-lin
 
 Meteor.startup(() => {
   
+  //AutoForm.setDefaultTemplate('materialize');
+
   console.log(Meteor.settings);
 
   // this is an expensive polyfill for clientside Buffer usage
@@ -19,12 +23,13 @@ Meteor.startup(() => {
   //global.Buffer = global.Buffer || require("buffer").Buffer; // eslint-disable-line
 
   if(!Meteor.users.find().count()) {
-    var options = {
-      username: Meteor.settings.private.Agnus.username, 
-      password: Meteor.settings.private.Agnus.password, 
-      email: Meteor.settings.private.Agnus.email
-    };
-    Accounts.createUser(options);
+    
+    // var options = {
+    //   username: Meteor.settings.private.Agnus.username , 
+    //   password: Meteor.settings.private.Agnus.password , 
+    //   email: Meteor.settings.private.Agnus.email
+    // };
+    // Accounts.createUser(options);
   }
 
   //Meteor.call('geraReferencia','BIM','0001', '0002', '1577');

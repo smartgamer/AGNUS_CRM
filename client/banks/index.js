@@ -19,8 +19,11 @@ Template.Banks.helpers({
             showNavigation: 'auto',
             fields: [
                 { key: '_id', label: 'Id',hidden: true },
-                { key: 'code', label: 'Code' },
-                { key: 'desc', label: 'Descrição' }
+                { key: 'code', label: Banks.simpleSchema().label()['code']},
+                { key: 'desc', label: Banks.simpleSchema().label()['desc']},
+                { key: 'codeDirectDebit', label:Banks.simpleSchema().label()['codeDirectDebit']},
+                { key: 'website',label:Banks.simpleSchema().label()['website'] },
+                
             ],
             useFontAwesome: true,
             rowClass:'',

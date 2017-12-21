@@ -19,9 +19,9 @@ Template.companiesList.helpers({
             showNavigation: 'auto',
             fields: [
                 { key: '_id', label: 'Id', hidden: true },
-                { key: 'code', label: 'Code' },
-                { key: 'name', label: 'Name' },
-                { key: 'desc', label: 'Description' },
+                { key: 'code', label: Companies.simpleSchema().label()['code'] },
+                { key: 'name', label: Companies.simpleSchema().label()['name'] },
+                { key: 'status', label: Companies.simpleSchema().label()['status'] },
                 
             ],
             useFontAwesome: true,

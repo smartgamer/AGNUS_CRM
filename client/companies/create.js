@@ -3,6 +3,7 @@ Template.NewCompany.onCreated(function(){
     
     self.autorun(function(){
         self.subscribe('companies');
+        self.subscribe('banks');
     });
 });
 

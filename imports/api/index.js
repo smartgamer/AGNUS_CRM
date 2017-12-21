@@ -11,3 +11,5 @@ import './invoices/server/methods.js'
 
 
 import './entities/index.js'
+
+import './bank/server/banks.js'
