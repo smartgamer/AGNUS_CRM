@@ -9,41 +9,41 @@
 ###
 
 
-meteor-base@1.1.0            # Packages every Meteor app needs to have
+meteor-base@1.2.0            # Packages every Meteor app needs to have
 mobile-experience@1.0.5       # Packages for a great mobile UX
 es5-shim@4.6.15                # ECMAScript 5 compatibility for older browsers
-ecmascript@0.8.3              # Enable ECMAScript2015+ syntax in app code
+ecmascript@0.9.0              # Enable ECMAScript2015+ syntax in app code
 audit-argument-checks@1.0.7   # ensure meteor method argument validation
 #browser-policy@1.1.0          # security-related policies enforced by newer browsers
 juliancwirko:postcss          # CSS post-processing plugin (replaces standard-minifier-css)
 session@1.1.7                 # ReactiveDict whose contents are preserved across Hot Code Push
 tracker@1.1.3                 # Meteor transparent reactive programming library
-mongo@1.2.2                   # The database Meteor supports right now
+mongo@1.3.1                   # The database Meteor supports right now
 random@1.0.10
 reactive-var@1.0.11
-reactive-dict@1.1.9
-check                            #check@1.2.5
-http@1.2.12
+reactive-dict@1.2.0
+check@1.2.5                            #check@1.2.5
+http@1.3.0
 ddp-rate-limiter@1.0.7
 underscore@1.0.10
-logging@1.1.17
+logging@1.1.19
 reload@1.1.11
-ejson@1.0.14
-less@2.7.9
+ejson@1.1.0
+less@2.7.11
 service-configuration@1.0.11
 mdg:validated-method
-shell-server@0.2.4
-dynamic-import@0.1.3
+shell-server@0.3.0
+dynamic-import@0.2.0
 #jquery@1.11.10
 
 # Meteor Auth Packages
-accounts-base
-accounts-ui
-accounts-password
+accounts-base@1.4.0
+accounts-ui@1.2.0
+accounts-password@1.5.0
 #accounts-facebook
 #accounts-google
 #accounts-twitter@1.3.0
-oauth-encryption@1.2.1
+oauth-encryption@1.3.0
 facebook-config-ui@1.0.0
 google-config-ui@1.0.0
 twitter-config-ui@1.0.0
@@ -61,6 +61,8 @@ aldeed:schema-index
 aldeed:template-extension
 aldeed:scheduled-tasks
 aldeed:autoform-bs-datepicker
+mozfet:autoform-materialize
+
 #bozhao:accounts-instagram
 #abhiaiyer:meteor-twilio
 
@@ -142,7 +144,8 @@ momentjs:moment
 orgztion:meteor-global-tether
 #mizzao:timesync # POr ver
 drewy:datetimepicker
-mizzao:sharejs
+#mizzao:sharejs
+edemaine:sharejs
 
 lookback:tooltips
 materialize:materialize
@@ -163,4 +166,4 @@ mdg:meteor-apm-agent
 
 jparker:crypto-md5
 fourseven:scss
-mozfet:autoform-materialize
+

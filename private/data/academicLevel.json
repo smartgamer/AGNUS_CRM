@@ -1,0 +1,62 @@
+[
+    {
+        "code": "ANA",
+        "desc": "Não sabe ler nem escrever",
+        "codigoQD": "NSLNE"
+    },
+    {
+        "code": "B",
+        "desc": "Bacharelato",
+        "codigoQD": "B"
+    },
+    {
+        "code": "EP1",
+        "desc": "Ensino Primário do 1º Grau - 5ª Classe",
+        "codigoQD": "EP1"
+    },
+    {
+        "code": "EP2",
+        "desc": "Ensino Primário do 2º Grau - 7ª Classe",
+        "codigoQD": "EP2"
+    },
+    {
+        "code": "ES1",
+        "desc": "Ensino Secundário Geral 1º Ciclo - 10ª Classe",
+        "codigoQD": "ESG1"
+    },
+    {
+        "code": "ES2",
+        "desc": "Ensino Secundário Geral 2º Ciclo - 12ª Classe",
+        "codigoQD": "ESG2"
+    },
+    {
+        "code": "ETB",
+        "desc": "Ensino Técnico Básico - 10ª Classe",
+        "codigoQD": "ETB"
+    },
+    {
+        "code": "ETE",
+        "desc": "Ensino Técnico Elementar - 7ª Classe",
+        "codigoQD": "ETE"
+    },
+    {
+        "code": "ETM",
+        "desc": "Ensino Técnico Medio - 12ª Classe",
+        "codigoQD": "ETM"
+    },
+    {
+        "code": "L",
+        "desc": "Licenciatura",
+        "codigoQD": "L"
+    },
+    {
+        "code": "M",
+        "desc": "Mestrado",
+        "codigoQD": "M"
+    },
+    {
+        "code": "SL",
+        "desc": "Sabe ler sem possuir ensino primário completo (SLESPEPC)",
+        "codigoQD": "SLESPE"
+    }
+]

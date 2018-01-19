@@ -11,5 +11,5 @@ Template.NewCompany.events({
     'click .company-close': function(){
         Session.set('NewCompany',false);
     }
-})
+});
 

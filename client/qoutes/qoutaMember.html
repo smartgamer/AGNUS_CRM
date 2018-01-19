@@ -1,4 +1,4 @@
-<template name="qouteSingle">
+<template name="QoutaMember">
 
     <button class="edit">
         <i class="material-icons left">edit</i> Editar</button>
@@ -14,20 +14,18 @@
     <section class="new-recipe-container">
         <div class="container">
             <div class="row">
-                
-                    <div class="col s4 ">
-                        {{#autoForm collection="Qoutas" doc=qoute type="readonly" id="insertProductForm"}}
 
+                <div class="col s4 ">
 
-                        <h3>Dados Gerais</h3>
+                    {{#autoForm collection="QoutasMember" type="insert" id="insertProductForm"}}
+                        {{> afQuickField name="Qouta" }}
+                        {{> afQuickField name="Member" }}
+                        {{> afQuickField name="Value" }}
 
-                        {{> afQuickField name="code" }} {{> afQuickField name="desc" }} {{> afQuickField name="year" }} {{> afQuickField name="begin"
-                        }} {{> afQuickField name="end" }} {{> afQuickField name="type"}} {{> afQuickField name="value"}}
-                        {{/autoForm}}
-                    </div>
+                    <h3>Dados Gerais</h3>
+                    {{/autoForm}}
+                </div>
             </div>
         </div>
-        {{> QoutaMember}}
-
     </section>
 </template>
