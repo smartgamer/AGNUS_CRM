@@ -30,12 +30,6 @@
         "website": ""
     },
     {
-        "code": "BU",
-        "desc": "Banco Único",
-        "codeDirectDebit": "",
-        "website": "www.bancounico.co.mz/"
-    },
-    {
         "code": "MZB",
         "desc": "Mozabanco",
         "codeDirectDebit": "",
