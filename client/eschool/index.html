@@ -1,0 +1,17 @@
+<template name="Eschool_Index">
+ 
+
+    {{#if $.Session.get 'NewAcademicYear'}} 
+       {{> NewAcademicYear}}
+   {{else}}
+       <button class="new-AcademicYear waves-effect waves-light btn">
+           <i class="fa fa-plus left"></i> 
+           New 
+       </button>
+       <div class="divider"></div>
+   {{/if}}
+
+    <section class="ListAcademicYear recipe">
+        {{> reactiveTable class="striped highlight ListAcademicYear" settings=settings }}
+    </section>
+</template>

@@ -1,0 +1,35 @@
+<template name="NewAcademicYear">
+    {{#autoForm collection="Academic_Year" type="insert" id="insertInvoiceForm"}}
+        
+                <div class="rows">
+                    <div class="card">
+                            <fieldset>
+                                    <legend>New Academic Year</legend>
+                    
+                                    <div class="col s6 ">
+                                            {{> afQuickField name="code" }}
+                                            {{> afQuickField name="desc" }}
+                                            {{> afQuickField name="begin" }}
+                                            {{> afQuickField name="end" }}
+                                            {{> afQuickField name="status"}}
+                                    </div>
+                                </fieldset>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="rows">
+                        <button type="reset" class="btn waves-effect waves-light">
+                            <i class="material-icons right">cancel</i>
+                            Reset 
+                        </button>    
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                             <i class="material-icons right">send</i>
+                        </button>
+                        <button class="academicYear-close btn waves-effect waves-light" type="reset" name="action"> Close
+                            <i class="material-icons right">close</i>
+                        </button>
+                            
+                </div>
+                
+                {{/autoForm}}
+</template>

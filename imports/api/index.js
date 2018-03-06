@@ -22,3 +22,7 @@ import './invoices/server/methods.js'
 import './entities/index.js'
 
 import './general/index.js'
+
+//Eschool
+import './eschool/server/methods.js'
+import './eschool/server/publications.js'
