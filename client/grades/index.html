@@ -1,0 +1,16 @@
+<template name="Grade_Index">
+    {{#if $.Session.get 'NewGrade'}} 
+       {{> NewGrade}}
+   {{else}}
+       <button class="new-Grade waves-effect waves-light btn">
+           <i class="fa fa-plus left"></i> 
+           New 
+       </button>
+       <div class="divider"></div>
+   {{/if}}
+
+
+   <section class="ListGrades recipe">
+       {{> reactiveTable class="striped highlight ListGrades" settings=settings }}
+   </section>
+</template>
