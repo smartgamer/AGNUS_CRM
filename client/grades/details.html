@@ -1,0 +1,34 @@
+<template name="Grade_Details">
+    {{#autoForm collection="Grades" doc=grade type="readonly" type="insert" id="insertInvoiceForm"}}
+        
+                <div class="rows">
+                    <div class="card">
+                            <fieldset>
+                                    <legend>New Grade</legend>
+                    
+                                    <div class="col s6 ">
+                                            {{> afQuickField name="code" }}
+                                            {{> afQuickField name="name" }}
+                                            {{> afQuickField name="desc" }}
+                                            {{> afQuickField name="grade" }}
+                                    </div>
+                                </fieldset>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="rows">
+                        <button type="reset" class="btn waves-effect waves-light">
+                            <i class="material-icons right">cancel</i>
+                            Reset 
+                        </button>    
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                             <i class="material-icons right">send</i>
+                        </button>
+                        <button class="grade-close btn waves-effect waves-light" type="reset" name="action"> Close
+                            <i class="material-icons right">close</i>
+                        </button>
+                            
+                </div>
+                
+                {{/autoForm}}
+</template>

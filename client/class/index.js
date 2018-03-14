@@ -1,24 +1,24 @@
-Template.Grade_Index.onCreated(function(){
+Template.classList.onCreated(function(){
     var self = this;
 
 });
 
-Template.Grade_Index.helpers({
-    grades: () => {
-        return Grades.find({});
+Template.classList.helpers({
+    classes: () => {
+        return Classes.find({});
     },
 
     settings: function () {
         return {
-            collection: 'GradesList',
+            collection: 'ClassList',
             rowsPerPage: 5,
             showFilter: true,
             showNavigation: 'auto',
             fields: [
                 { key: '_id', label: 'Id',hidden: true },
                 { key: 'code', label: Grades.simpleSchema().label()['code']},
-                { key: 'name', label: Grades.simpleSchema().label()['name']},
-                { key: 'desc', label:Grades.simpleSchema().label()['desc']},
+                { key: 'desc', label: Grades.simpleSchema().label()['desc']},
+                { key: 'limit', label:Grades.simpleSchema().label()['limit']},
                 { key: 'grade',label:Grades.simpleSchema().label()['grade'] },
                 
             ],
@@ -29,7 +29,7 @@ Template.Grade_Index.helpers({
     }
 });
 
-Template.Grade_Index.events({
+Template.classList.events({
   'click .ListGrades tbody tr': function (event) {
     // set the blog post we'll display details and news for
     var post = this;

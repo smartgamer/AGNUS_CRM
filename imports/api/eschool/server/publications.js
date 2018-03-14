@@ -17,3 +17,13 @@ ReactiveTable.publish("GradesList",
 Meteor.publish('grade',function(){
     return Grades.find({});
 });
+
+ReactiveTable.publish("ClassesList",
+    function () {
+            return Classes;
+    }
+);
+
+Meteor.publish('classes',function(){
+    return Classes.find({});
+});
