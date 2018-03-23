@@ -6,7 +6,7 @@ if (Meteor.isServer) {
         },
         deleteGrade: function(id){
             // Antes de Remover validar todos os chaves estrangeiras
-            Grade.remove(id);
+            Grades.remove(id);
         }
     });
 }
