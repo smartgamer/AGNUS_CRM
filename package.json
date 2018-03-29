@@ -24,7 +24,7 @@
     "history": "^4.7.2",
     "i18next": "^10.4.1",
     "immutable": "^3.8.2",
-    "materialize-css": "^0.100.2",
+    "materialize-css": "^1.0.0-beta",
     "meteor-node-stubs": "^0.3.2",
     "moment": "^2.20.1",
     "mongodb": "^2.2.34",

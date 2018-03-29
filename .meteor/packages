@@ -61,7 +61,7 @@ aldeed:schema-index
 aldeed:template-extension
 aldeed:scheduled-tasks
 aldeed:autoform-bs-datepicker
-mozfet:autoform-materialize
+#mozfet:autoform-materialize
 
 #bozhao:accounts-instagram
 #abhiaiyer:meteor-twilio

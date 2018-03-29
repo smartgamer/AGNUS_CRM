@@ -85,7 +85,6 @@ localstorage@1.2.0
 logging@1.1.19
 maazalik:highcharts@0.4.0
 maazalik:highcharts-gauge@0.4.0
-manuel:reactivearray@1.0.6
 matb33:collection-hooks@0.8.4
 materialize:materialize@0.100.2
 mdg:meteor-apm-agent@3.1.1
@@ -111,8 +110,6 @@ mongo@1.4.3
 mongo-dev-server@1.1.0
 mongo-id@1.0.6
 mongo-livedata@1.0.12
-mozfet:autoform-materialize@3.5.5
-mozfet:materialize-icons@0.0.4
 mrt:flash-messages@1.0.1
 natestrauser:select2@4.0.3
 npm-bcrypt@0.9.3

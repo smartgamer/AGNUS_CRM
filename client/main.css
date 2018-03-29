@@ -1,15 +1,7 @@
-
-.container {
-    padding-right: auto; 
-    padding-left: auto; 
-    width: auto;
-   /* margin-right: auto; */
-   /* margin-left: auto; */
-  }
   
   body {
    line-height: 1.5;
-   font-family: Roboto, sans-serif;
+   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
    font-weight: normal;
    color: rgba(0, 0, 0, 0.87);
   }
@@ -28,21 +20,26 @@
    background-color: rgb(92, 87, 87);
   }
   
-  .nav-wrapper{
-    background:#d50000 ;
-   /* background: #524763; */
-  }
+  
   
   header a:focus, a:hover {
    color:white;
    text-decoration: none;
   }
+
+  nav ul a, nav .brand-logo {
+    color: #444;
+  }
   
-  nav.nav-extended {
+ /* nav.nav-extended {
     background: #d50000;
-   /* background: #524763; */
+  
 
   }
+  .nav-wrapper{
+    background:#d50000 ;
+    background: #524763; 
+  }*/
 
 .page-footer {
     padding-top: 20px;
@@ -53,4 +50,11 @@
 
 #chart-dashboard {
   padding-top: 12px;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
 }
