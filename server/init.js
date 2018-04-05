@@ -18,6 +18,20 @@ Meteor.startup(() => {
   Tracker.autorun(function () {
     console.log(Meteor.settings);
   });
+
+  // if(!Meteor.users.find().count()) {
+  //   var options = {
+  //     username: Meteor.settings.private.Aguns.username, 
+  //     password: Meteor.settings.private.Aguns.password, 
+  //     email: Meteor.settings.private.Aguns.email
+  //   };
+  //   Accounts.createUser(options);
+  // }
+
+  // // code to run on server at startup
+  // smtp = Meteor.settings.private.Aguns.SMTP;
+
+  // process.env.MAIL_URL = 'smtp://' + encodeURIComponent(smtp.username) + ':' + encodeURIComponent(smtp.password) + '@' + encodeURIComponent(smtp.server) + ':' + smtp.port;
 });
 
 // Deny all client-side updates to user documents
