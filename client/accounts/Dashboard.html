@@ -6,6 +6,24 @@
 
     <h3 class="header">Pagina Inicial</h3>
 
+    {{> companiesList}}
+
+  </div>
+
+
+
+
+</template>
+
+
+<template name="DashBoard_Account_AGNUS">
+  <div class="container">
+    <div class="row">
+      {{> atForm}}
+    </div>
+
+    <h3 class="header">Pagina Inicial</h3>
+
     {{> highchartsHelper chartId="test" chartWidth="100%" charHeight="100%" chartObject=topGenresChart}}
 
     <div class="row">
