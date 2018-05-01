@@ -36,7 +36,9 @@ Template.companiesList.events({
         // set the blog post we'll display details and news for
         var post = this;
         FlowRouter.setParams({ id: post._id });
-        FlowRouter.go('/company/' + post._id);
+        //FlowRouter.go('/company/' + post._id);
+        FlowRouter.go('/school/' + post._id);
+        
     },
     'click .new-Company': function () {
         Session.set('NewCompany', true);

@@ -1,0 +1,36 @@
+<template name="CompanyDetails">
+    <div class="rows">
+
+        {{#autoForm collection="Companies" doc=company type="readonly"  id="insertCompanyForm"}}
+
+        <div class="rows">
+            <div class="card">
+                <fieldset>
+                    <legend>Escola</legend>
+
+                    <div class="col s6 ">
+                        
+                        
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="rows">
+            <button type="reset" class="btn waves-effect waves-light">
+                <i class="material-icons right">cancel</i>
+                Reset
+            </button>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button>
+            <button class="bank-close btn waves-effect waves-light" type="reset" name="action"> Close
+                <i class="material-icons right">close</i>
+            </button>
+
+        </div>
+
+        {{/autoForm}}
+    </div>
+
+</template>
