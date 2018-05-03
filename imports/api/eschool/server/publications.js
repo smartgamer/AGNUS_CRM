@@ -88,7 +88,7 @@ Meteor.publish( 'schoolSearch', function( search ) {
   return Schools.find( query, projection );
 });
 
-Meteor.publish('schools', function(){
+Meteor.publish('schoolsList', function(){
 	return Schools.find();
 });
 

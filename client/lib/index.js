@@ -4,6 +4,7 @@ import { datetimepicker } from 'meteor/drewy:datetimepicker';
 
 
 myCreateFunc = function() {
+        $('select').formSelect();
         $('.datepicker').datepicker();
         $('.datetimepicker').datetimepicker();
         $('.button-collapse').sideNav({
@@ -15,6 +16,8 @@ myCreateFunc = function() {
             onClose: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is closed
           }
         );
+
+        
 
     }
 ;

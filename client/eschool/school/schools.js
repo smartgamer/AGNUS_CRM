@@ -1,4 +1,4 @@
-Template.schools.onCreated(function() {
+Template.schoolsList.onCreated(function() {
     var self = this;
 	self.autorun(function(){
 		self.subscribe('schoolImages');
@@ -18,7 +18,7 @@ Template.schools.onCreated(function() {
 	});
 });
 
-Template.schools.helpers({
+Template.schoolsList.helpers({
 	searching() {
 		return Template.instance().searching.get();
 	},
@@ -33,7 +33,7 @@ Template.schools.helpers({
     }
 });
 
-Template.schools.events({
+Template.schoolsList.events({
   'keyup .searchbox' ( event, template ) {
     let value = event.target.value.trim();
 
