@@ -1,229 +1,77 @@
-<template name="Header_New">
-
-    <header>
-        <nav class="nav-extended">
-            <div class="nav-wrapper">
-                <a href="/" class="brand-logo">Gestão de Membros</a>
-                <a href="/" data-activates="mobile-demo" class="button-collapse">
-                    <i class="material-icons">menu</i>
-                </a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li>
-                        <a href="/">
-                            <i class="material-icons right">home</i>
-                            <span class="hidden-sm-down">Pagina Inicial</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/accounts">
-                            <i class="material-icons right">account_circle</i>
-                            <span class="hidden-sm-down">Membros</span>
-                        </a>
-                    </li>
-                    <li>{{> loginButtons}}</li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li>
-                        <a href="/">
-                            <i class="material-icons right">home</i>
-                            <span class="hidden-sm-down">Pagina Inicial</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/accounts">
-                            <i class="material-icons right">account_circle</i>
-                            <span class="hidden-sm-down">Membros</span>
-                        </a>
-                    </li>
-                    <li>{{> loginButtons}}</li>
-
-                </ul>
+<template name="header">
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                {{#if currentUser}}
+                    {{#if isInRole 'superAdmin'}}
+                    <div class="six columns">
+                        <p class="u-full-width">
+                            <a href="/" class="header-text">
+                                <a href="/" class="header-text">
+                                    <img class="minerva-logo" src="/minerva-school.svg" height="30" alt="minerva for school">
+                                </a>
+                            </a>
+                        </p>
+                    </div>
+                    {{else}}
+                        <div class="six columns">
+                            <p class="u-full-width">
+                                <a href="/" class="header-text">
+                                    <!-- {{#if schoolLogoExists}}
+                                        {{#with FS.GetFile "schoolImages" schoolLogo}}
+                                            <img class="school-logo" src="{{url}}" height="30" alt="school logo">
+                                        {{/with}}
+                                    {{/if}} -->
+                                    <img class="minerva-logo" src="/logo.png" height="30" alt="school logo">
+                                    <span>{{schoolName}}</span>
+                                </a>
+                            </p>
+                        </div>
+                    {{/if}}
+                {{else}}
+                    <div class="twelve columns">
+                        <p class="u-full-width centered-text">
+                            <a href="/" class="header-text">
+                                <img class="minerva-logo" src="/minerva-school.svg" height="30" alt="minerva for school">
+                            </a>
+                        </p>
+                    </div>
+                {{/if}}
+                {{#if currentUser}}
+                    <div class="six columns right">
+                        <p>
+                            {{#if isInRole 'superAdmin'}}
+                                <a href="/admin/{{currentUser._id}}" class="button button-primary">
+                                    The grand master
+                                </a>
+                            {{/if}}
+                            {{#if isInRole 'admin'}}
+                                <a href="/admin/{{currentUser._id}}" class="button button-primary">
+                                    {{#if usrImageExists}}
+                                        {{#with FS.GetFile "userImage" usrImage}}
+                                            <div class="teacher-profile" style="background-image: url({{url}});"></div>
+                                        {{/with}}
+                                    {{/if}}
+                                    school admin
+                                </a>
+                            {{/if}}
+                            {{#if isInRole 'teacher'}}
+                            <a href="/teacher/{{currentUser._id}}" class="button button-primary">
+                                {{#if usrImageExists}}
+                                    {{#with FS.GetFile "userImage" usrImage}}
+                                        <div class="teacher-profile" style="background-image: url({{url}});"></div>
+                                    {{/with}}
+                                {{/if}}
+                                {{thisUser.username}}
+                            </a>
+                            {{/if}}
+                            <a class="logout button button-primary">
+                                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                    </div>
+                {{/if}}
             </div>
-
-
-            <div class="nav-content">
-                <ul class="tabs tabs-transparent">
-                    <li class="tab">
-                        <a href="/settings">Definições</a>
-                    </li>
-                    <li class="tab">
-                        <a class="active" href="#test2">Relatórios</a>
-                    </li>
-                    <li class="tab">
-                        <a href="/qoutas">Cotas</a>
-                    </li>
-                    <li class="tab">
-                        <a href="/invoices">Pagamentos</a>
-                    </li>
-                    <li class="tab">
-                        <a href="#test4">Suporte</a>
-                    </li>
-
-                </ul>
-
-            </div>
-        </nav>
-    </header>
-
-
-
-</template>
-
-<template name="Header_OLD">
-
-    <header>
-        <nav role="navigation">
-
-            <div class="nav-wrapper container">
-
-                <a id="logo-container" href="#" class="brand-logo">SISSA</a>
-
-                <ul class="right hide-on-med-and-down">
-                    <li>
-                        <a href="sass.html">
-                            <i class="material-icons">search</i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="badges.html">
-                            <i class="material-icons">view_module</i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="collapsible.html">
-                            <i class="material-icons">refresh</i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mobile.html">
-                            <i class="material-icons">more_vert</i>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="right hide-on-med-and-down">
-                    <li>
-                        {{> loginButtons}}
-                    </li>
-                </ul>
-
-                <ul id="nav-mobile" class="sidenav" style="transform: translateX(-105%);">
-                    <li>
-                        <a href="#">Navbar Link</a>
-                    </li>
-                </ul>
-                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-                    <i class="material-icons">menu</i>
-                </a>
-            </div>
-        </nav>
-    </header>
-</template>
-
-<template name="Header">
-
-    <header>
-        <nav class="white" role="navigation">
-
-            <div class="nav-wrapper container">
-                <a id="logo-container" href="/" class="brand-logo">SISSA</a>
-                <ul class="right hide-on-med-and-down">
-                    <li>
-                        {{> loginButtons}}
-                    </li>
-                </ul>
-
-                <ul id="nav-mobile" class="sidenav" style="transform: translateX(-105%);">
-                    <li>
-                        <a href="#">Navbar Link</a>
-                    </li>
-                </ul>
-                <a href="#" data-target="nav-mobile" class="sidenav-trigger">
-                    <i class="material-icons">menu</i>
-                </a>
-            </div>
-        </nav>
-    </header>
-</template>
-
-
-<template name="Header_FRE">
-
-    <header>
-        <nav class="nav-extended">
-            <div class="nav-wrapper">
-                <a href="/" class="brand-logo">AGNUS CRM</a>
-                <a href="/" data-activates="mobile-demo" class="button-collapse">
-                    <i class="material-icons">menu</i>
-                </a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li>
-                        <a href="/">
-                            <i class="material-icons right">home</i>
-                            <span class="hidden-sm-down">Home</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/accounts">
-                            <i class="material-icons right">account_circle</i>
-                            <span class="hidden-sm-down">Accounts</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/customers">
-                            <i class="material-icons right">group</i>
-                            <span class="hidden-sm-down">Customers</span>
-                        </a>
-                    </li>
-                    <li>{{> loginButtons}}</li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li>
-                        <a href="/">
-                            <i class="material-icons right">home</i>
-                            <span class="hidden-sm-down">Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/accounts">
-                            <i class="material-icons right">account_circle</i>
-                            <span class="hidden-sm-down">Accounts</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/customers">
-                            <i class="material-icons right">group</i>
-                            <span class="hidden-sm-down">Customers</span>
-                        </a>
-                    </li>
-                    <li>{{> loginButtons}}</li>
-
-                </ul>
-            </div>
-
-
-            <div class="nav-content">
-                <ul class="tabs tabs-transparent">
-                    <li class="tab">
-                        <a href="/settings">Settings</a>
-                    </li>
-                    <li class="tab">
-                        <a class="active" href="#test2">Reports</a>
-                    </li>
-                    <li class="tab">
-                        <a href="/qoutas">Qoutas</a>
-                    </li>
-                    <li class="tab">
-                        <a href="/invoices">invoices</a>
-                    </li>
-                    <li class="tab">
-                        <a href="#test4">Suport US</a>
-                    </li>
-
-                </ul>
-
-            </div>
-        </nav>
-    </header>
+        </div>
+    </div>
 </template>

@@ -176,3 +176,4 @@ cfs:standard-packages
 cfs:gridfs
 cfs:ui
 cfs:filesystem
+themeteorchef:bert
