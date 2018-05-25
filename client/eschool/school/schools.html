@@ -1,16 +1,16 @@
 <template name="schoolsList">
     <div class="row top-bar">
         <div class="six columns">
-            <h3>{{schoolCount}} schools</h3>
+            <h3>{{schoolCount}} Escolas</h3>
         </div>
         <div class="six columns right">
-            <a class="button button-primary" href="/add-school">add a new school</a>
+            <a class="button button-primary" href="/add-school">adicionar nova escola</a>
         </div>
     </div>
 
     <div class="row">
         <div class="twlve columns">
-            <input type="text" name="search" class="u-full-width searchbox" placeholder="Find a school... click enter to search">
+            <input type="text" name="search" class="u-full-width searchbox" placeholder="Encontre uma escola... Clica Enter para Pesquisar">
         </div>
     </div>
 
@@ -19,8 +19,8 @@
             <table class="u-full-width">
                 <thead>
                     <th></th>
-                    <th>school name</th>
-                    <th class="right">action</th>
+                    <th>Nome</th>
+                    <th class="right">Acção</th>
                 </thead>
                 <tbody>
                     {{#if searching}}
@@ -41,13 +41,13 @@
                                     <p>{{name}}</p>
                                 </td>
                                 <td class="right">
-                                    <a href="/school/{{_id}}" class="button">view</a>
+                                    <a href="/school/{{_id}}" class="button">Ver</a>
                                 </td>
                             </tr>
                         {{else}}
                             <tr>
                                 <td colspan="3">
-                                    <h1 class="placeholder">no schools found</h1>
+                                    <h1 class="placeholder">Não foram encontradas escolas</h1>
                                 </td>
                             </tr>
                         {{/each}}

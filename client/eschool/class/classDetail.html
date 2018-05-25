@@ -1,0 +1,65 @@
+<template name="classDetail">
+    <div class="row">
+        <div class="twelve columns">
+            <h3>class: {{class.Form}} {{class.streamName}}</h3>
+            {{#if class.active}}
+            {{else}}
+                <p>this class has been <span class="red">deactivated</span></p>
+            {{/if}}
+        </div>
+    </div>
+    {{#if isInRole 'admin'}}
+        <div class="row">
+            <div class="twelve columns">
+                <hr>
+                <h5>Generate class results</h5>
+                <p>select an exam below and print the class performance for the exam.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="eight columns">
+                <select name="exams" id="examList" class="u full-width exam-list">
+                    <option value="">select an exam</option>
+                    {{#each exams}}
+                        <option value="{{_id}}">{{year}} {{type}}, {{term}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="four columns right">
+                <button class="button-primary print-class-results">print class results</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="twelve columns">
+                <hr>
+                {{#if class.active}}
+                    <button class="deactivate-class delete">deactivate class</button>
+                {{else}}
+                    <button class="deactivate-class">activate class</button>
+                {{/if}}
+                <a href="/edit-class/{{class._id}}" class="button">edit class</a>
+            </div>
+        </div>
+    {{else}}
+        <div class="row">
+            <div class="twelve columns">
+                <hr>
+                <p>generate a class list for your subject:</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">
+                <select name="subject" id="subjectList" class="u full-width subject-list">
+                    <option value="">select the subject</option>
+                    {{#each subjects}}
+                        <option value="{{_id}}">{{name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="six columns">
+                <button class="button-primary generate-class-list">generate class list</button>
+            </div>
+        </div>
+    {{/if}}
+</template>

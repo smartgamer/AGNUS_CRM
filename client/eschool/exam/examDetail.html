@@ -1,0 +1,34 @@
+<template name="examDetail">
+    <div class="row">
+        <div class="twelve columns">
+            <h3>{{exam.type}}</h3>
+            {{#if exam.active}}
+            {{else}}
+                <p class="red">this exam is deactivated</p>
+            {{/if}}
+        </div>
+        <div class="twelve-columns">
+            <p><strong>term:</strong> {{exam.term}}</p>
+            <p><strong>year:</strong> {{exam.year}}</p>
+            <hr>
+            <p class="tags">
+                <strong>classes:</strong>
+                <span class="tagstyle">sample</span>
+            </p>
+        </div>
+    </div>
+    {{#if isInRole 'admin'}}
+        <div class="row">
+            <div class="twelve columns">
+                <hr>
+                <p></p>
+                {{#if exam.active}}
+                    <button class="deactivate-exam delete">deactivate exam</button>
+                {{else}}
+                    <button class="deactivate-exam">activate exam</button>
+                {{/if}}
+                <a href="/edit-exam/{{exam._id}}" class="button">edit</a>
+            </div>
+        </div>
+    {{/if}}
+</template>
