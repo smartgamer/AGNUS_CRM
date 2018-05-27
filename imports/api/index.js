@@ -3,6 +3,10 @@ import './bank/server/methods.js'
 import './bank/server/publications.js'
 import './bank/server/default.js'
 
+// User Managmant
+import './users/server/methods.js'
+import './users/server/publications.js'
+
 // Account Managment
 import './accounts/server/publications.js'
 import './accounts/server/methods.js'
