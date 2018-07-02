@@ -28,11 +28,31 @@ Meteor.publish('classes',function(){
     return Classes.find({});
 });
 
+Meteor.publish('teachers', function(){
+	return Teachers.find();
+});
 
+/* Meteor.publish('teachersList', function(){
+  var teachIds = Teachers.find().map(function(p) { return p.account_id });
+  console.log(teachIds);
+  return Accounts.find({_id: {$in: teachIds}});
+ 
+}); */
+
+ReactiveTable.publish("teachersList",
+    function () {
+      var teachIds = Teachers.find().map(function(p) { return p.account_id });
+      var accou = Accounts.find({_id: {$in: teachIds}});
+      console.log(accou);
+      //return accou.fetch();
+      return Accounts;
+    }
+);
 
 Meteor.publish('students', function(){
 	return Students.find();
 });
+
 Meteor.publish( 'studentSearch', function( search ) {
   check( search, Match.OneOf( String, null, undefined ) );
   let query = {},
@@ -64,10 +84,6 @@ Meteor.publish('singleStudentImage', function(id){
   check(id, String);
   return StudentImages.find({_id: id});
 });
-
-
-
-
 
 //SCHOOL
 Meteor.publish( 'schoolSearch', function( search ) {

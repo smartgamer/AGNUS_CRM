@@ -1,54 +1,25 @@
 <template name="teachers">
     <div class="row top-bar">
-        <div class="twelve columns">
-            <h3>teachers</h3>
+            <div class="eight columns">
+                <h3>Professores</h3>
+            </div>
+            <div class="four columns right">
+                    <a class="button button-primary u-full-width" href="/add-teacher">adicionar novos professores</a>
+                {{#if isInRole 'admin'}}
+                    <a class="button button-primary u-full-width" href="/add-teacher">adicionar novos professores</a>
+                {{/if}}
+            </div>
         </div>
-    </div>
 
     <div class="row">
         <div class="twelve columns">
-            <table class="u-full-width">
-                <thead>
-                    <th></th>
-                    <th>teacher's names</th>
-                    <th>staff ID</th>
-                    <th class="right">action</th>
-                </thead>
-                <tbody>
-                    {{#if searching}}
-                        <tr>
-                            <td colspan="2"><h1 class="placeholder">loading...</h1></td>
-                        </tr>
-                    {{else}}
-                        {{#each teacher}}
-                            <tr>
-                                <td>
-                                    {{#with FS.GetFile "userImage" image}}
-                        	            <div class="student-preview" style="background-image: url({{url}});"></div>
-                                    {{else}}
-                                        <div class="student-preview"></div>
-                        	        {{/with}}
-                                </td>
-                                <td>
-                                    <p class="capitalize">{{profile.firstname}} {{profile.lastname}}</p>
-                                </td>
-                                <td>
-                                    <p>{{profile.staffId}}</p>
-                                </td>
-                                <td class="right">
-                                    <a href="/teacher/{{_id}}" class="button">view teacher</a>
-                                </td>
-                            </tr>
-                        {{else}}
-                            <tr>
-                                <td colspan="4">
-                                    <h1 class="placeholder">no teachers found</h1>
-                                </td>
-                            </tr>
-                        {{/each}}
-                    {{/if}}
-                </tbody>
-            </table>
+           
+            {{#if Template.subscriptionsReady}}
+                {{> reactiveTable class="table table-striped table-hover ListTeachers" settings=settings }}
+            {{else}}
+                <p>Loading</p>
+                {{/if}}
+            
         </div>
     </div>
 </template>

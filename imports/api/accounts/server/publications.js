@@ -12,9 +12,10 @@ ReactiveTable.publish("accountsList",
 Meteor.publish('allUsers', function(){
 	return Meteor.users.find({sort: { 'profile.firstname': 1 }});
 });
-Meteor.publish('teachers', function(){
+/* Meteor.publish('teachers', function(){
 	return Meteor.users.find({'roles.__global_roles__':'teacher'});
-});
+}); */
+
 Meteor.publish(null, function (){
   return Meteor.roles.find()
 });

@@ -19,6 +19,9 @@
     <li class="menu-item">
         <a href="/classes" class="button {{isActiveRoute class='active button-primary' name='classes'}} {{isActiveRoute class='active button-primary' name='addClass'}} {{isActiveRoute class='active button-primary' name='singleClass'}} {{isActiveRoute class='active button-primary' name='editSingleClass'}}"><i class="fa fa-users" aria-hidden="true"></i> classes</a>
     </li>
+    <li class="menu-item">
+            <a href="/teachers" class="button {{isActiveRoute class='active button-primary' name='teachers'}} {{isActiveRoute class='active button-primary' name='singleTeacher'}} {{isActiveRoute class='active button-primary' name='editSingleTeacher'}}{{isActiveRoute class='active button-primary' name='addTeacher'}}"><i class="fa fa-user-circle-o" aria-hidden="true"></i> teachers</a>
+        </li>
     {{#if isInRole 'admin'}}
         <li class="menu-item">
             <a href="/subjects" class="button {{isActiveRoute class='active button-primary' name='subjects'}} {{isActiveRoute class='active button-primary' name='singleSubject'}} {{isActiveRoute class='active button-primary' name='editSingleSubject'}} {{isActiveRoute class='active button-primary' name='addSubject'}}"><i class="fa fa-book" aria-hidden="true"></i> subjects</a>

@@ -177,3 +177,6 @@ cfs:gridfs
 cfs:ui
 cfs:filesystem
 themeteorchef:bert
+akryum:vue
+akryum:vue-component
+akryum:vue-blaze-template

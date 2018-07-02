@@ -1,45 +1,46 @@
-<template name="MainLayout">
-	{{> Header}}
-    <div class="container body-container">
-		{{#if currentUser}}
-			<div class="row">
-				<div class="three columns sidebar">
-					{{> sidebar}}
-				</div>
-				<div class="nine columns content">
-					{{> Template.dynamic template=main}}
-				</div>
-			</div>
-		{{/if}}
-    </div>
-	<div class="processing">
-		<div class="modally">
-			<span class="loader">
-				<span class="loader-inner"></span>
-			</span>
-			<p>processing</p>
-		</div>
-	</div>
+<template name="MainLayout_NEW">
+        {{> Header}}
+        <div class="container body-container">
+
+                <div class="row">
+                        <div class="three columns sidebar">
+                                {{> sidebar}}
+                        </div>
+                        <div class="nine columns content">
+                                {{> Template.dynamic template=main}}
+                        </div>
+                </div>
+
+        </div>
+        <div class="processing">
+                <div class="modally">
+                        <span class="loader">
+                                <span class="loader-inner"></span>
+                        </span>
+                        <p>processing</p>
+                </div>
+        </div>
 </template>
 
 
 
-<template name="MainLayout_OLD">
+<template name="MainLayout">
 
         {{> Header}} 
+        
         {{> SideNav}}
 
         <main>
 
                 <div class="announcement">
-
+                        {{> sidebar}}
                         <!-- <div class="container">Version 1.0 is coming soon! See this
                                 <a href="https://github.com/gmahota/AGNUS_CRM"> GitHub post</a>
                                 for more information.
                         </div> -->
                 </div>
                 <div class="container">
-                        {{> Template.dynamic template=main}}
+                        {{> Template.dynamic template=main}}    
                 </div>
         </main>
 

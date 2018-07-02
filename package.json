@@ -43,7 +43,9 @@
     "simpl-schema": "^0.3.2",
     "tether": "^1.4.4",
     "transliteration": "^1.6.2",
-    "twilio": "^3.15.1"
+    "twilio": "^3.15.1",
+    "vue": "^2.1.10",
+    "vue-meteor-tracker": "^1.0.3"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
