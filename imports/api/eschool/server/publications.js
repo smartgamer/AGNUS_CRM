@@ -44,8 +44,8 @@ ReactiveTable.publish("teachersList",
       var teachIds = Teachers.find().map(function(p) { return p.account_id });
       var accou = Accounts.find({_id: {$in: teachIds}});
       console.log(accou);
-      //return accou.fetch();
-      return Accounts;
+      return accou.fetch();
+      //return Accounts;
     }
 );
 
