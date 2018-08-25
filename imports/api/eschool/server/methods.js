@@ -11,8 +11,8 @@ if (Meteor.isServer) {
     });
 }
 
-if(Meteor.isClient){
-    Meteor.subscribe('academic_Year');
-    Meteor.subscribe('grade');
-    Meteor.subscribe('classes');
-}
+// if(Meteor.isClient){
+//     Meteor.subscribe('academic_Year');
+//     Meteor.subscribe('grade');
+//     Meteor.subscribe('classes');
+// }

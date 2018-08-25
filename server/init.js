@@ -7,6 +7,10 @@ import { Meteor } from 'meteor/meteor';
 
 import { getSchemas } from '../imports/plugins/core/collections/lib/registerSchema.js';
 
+
+import Vue from 'vue'
+import ElementUI from 'element-ui'
+
 // this is an expensive polyfill for clientside Buffer usage
 // but we recommend you refactor to remove this dependency
 global.Buffer = global.Buffer || require("buffer").Buffer; // eslint-disable-line

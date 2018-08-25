@@ -8,6 +8,6 @@ if (Meteor.isServer) {
     });
 }
 
-if(Meteor.isClient){
-    Meteor.subscribe('academicLevel');
-}
+// if(Meteor.isClient){
+//     Meteor.subscribe('academicLevel');
+// }
