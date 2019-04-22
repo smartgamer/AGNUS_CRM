@@ -1,4 +1,4 @@
-Template.header.onCreated(function() {
+/* Template.header.onCreated(function() {
 	var self = this;
 	self.autorun(function() {
 		self.subscribe('allUsers');
@@ -80,3 +80,4 @@ Template.header.events({
 		$('#menufy-lateral-nav').toggleClass('lateral-menu-is-open');
     }
 });
+ */
